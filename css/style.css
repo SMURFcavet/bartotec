@@ -1,0 +1,336 @@
+body {
+            background-color: #DAD3B8;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            justify-content: center;
+            
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        #header {
+            background-color: #6E7F49CC;
+            height: 8vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #headerIcons {
+            display: flex;
+            align-items: center;
+            gap: 2vh;
+            margin-right: 2vw;
+        }
+
+        #logo {
+            height: 12vh;
+            width: auto;
+            margin-left: 2vw;
+            margin-top: 3vh;
+        }
+
+        #favorite {
+            height: 6vh;
+            width: auto;
+            vertical-align: top;
+        }
+
+        #perfil {
+            height: 6vh;
+            width: auto;
+            vertical-align: top;
+
+        }
+
+        #main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #futter {
+            background-color: #6E7F49CC;
+            height: 50vh;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        #barraPesquisa {
+            background-color: #EDEDED;
+            height: 6vh;
+            width: 60%;
+
+            margin-top: 6vh;
+            border-radius: 48px;
+        }
+
+        #pesquisa {
+            height: 4vh;
+            padding-left: 18px;
+            padding-top: 7px;
+        }
+
+
+        #categoria {
+            color: #636A49;
+            font-family: 'Poppins', sans-serif;
+            border-color: #636A498A;
+            border-width: 2px;
+            border-style: solid;
+            padding: 8px 16px;
+            padding-right: 200px;
+            border-radius: 10px;
+            margin-top: 4vh;
+        }
+
+        #categoriaTudo {
+            margin-top: 4vh;
+            color: #636A49;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #verTudo {
+            height: 6vh;
+            width: 6vh;
+            padding-left: 9px;
+        }
+
+        #titleCategoria {
+            display: flex;
+            flex-direction: row;
+            margin-top: 8vh;
+            align-self: flex-start;
+            margin-left: 12vw;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+
+        #quatroQuadrados {
+            height: 4vh;
+            width: auto;
+            margin-right: 10px;
+            margin-top: 1vh;
+        }
+
+        #categoriaSelecionada {
+            color: #636A49;
+            font-family: 'Poppins', sans-serif;
+            border-bottom: 4px solid #636A49;
+            font-weight: bold;
+            padding-bottom: 5px;
+            margin-top: 4vh;
+        }
+
+        #categorias {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+        }
+
+        #imagemCategoria {
+            height: 20vh;
+            width: 34vh;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        #imagensCategoria {
+            display: flex;
+            justify-content: center;
+            margin-top: 6vh;
+            gap: 20px;
+        }
+
+        #descricaoImagem {
+            color: #636A49;
+            font-family: 'Poppins', sans-serif;
+            background-color: #DAD3B8;
+            border-style: solid;
+            border-width: 2px;
+            border-color: #636A498A;
+            border-radius: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 0;
+            padding-left: 8px;
+            padding-bottom: 4px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #favoriteBorder {
+           height: 2.5vh;
+           width: auto;
+           padding-right: 8px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #logoFutter {
+            height: 12vh;
+            width: auto;
+            margin-top: 3vh;
+        }
+
+        #caixa1Futter {
+            width: fit-content;
+        }
+
+        #caixa2Futter {
+            width: fit-content;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #textoFutter {
+            color: #FAFAFA;
+            font-family: 'Poppins', sans-serif;
+            margin-top: -5vh;
+            margin-left: 1vw;
+            text-align: center;
+        }
+
+        #linkFutter {
+            color: #FAFAFA;
+            font-family: 'Poppins', sans-serif;
+            margin-top: 1vh;
+            line-height: 1;
+        }
+
+        #titleFutter {
+            color: #FAFAFA;
+            font-family: 'Poppins', sans-serif;
+            margin-top: 2vh;
+            font-weight: 600;
+        }
+
+        #futter {
+            background-color: #6E7F49CC;
+            width: 100%;
+            min-height: 50vh;
+            box-sizing: border-box;
+            padding: 2vh 3vw;
+            margin-top: auto;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 5vw;
+        }
+
+        #imgFutter {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            margin-top: 1vh;
+        }
+
+        #socialFutter {
+            height: 6vh;
+            width: auto;
+        }
+
+        #socialFutters {
+            height: 5vh;
+            width: auto;
+            margin-top: 0.6vh;
+        }
+
+        #textoFutter2 {
+            color: #FAFAFA;
+            font-family: 'Poppins', sans-serif;
+            margin-top: 2vh;
+            text-align: left;
+        }
+
+        #sobreNos, #comoFunciona, #politicaPrivacidade, #centralAjuda, #faleConosco, #feedback {
+            display: none;
+        }
+
+        #feedbackImgAntes {
+            height: 4vh;
+            width: auto;
+            margin-top: 1vh;
+            vertical-align: top;
+        }
+
+        #feedback {
+            display: none;
+            flex-direction: row;
+            gap: 10px;
+            margin-top: 1vh;
+        }
+
+        #botaoFeedback {
+            background-color: #636A49;
+            color: #FAFAFA;
+            font-family: 'Poppins', sans-serif;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 16px;
+            margin-top: 1vh;
+            cursor: pointer;
+            display: none;
+        }
+
+        @media ( min-width: 1024px ) 
+        {
+            #imagensCategoria
+            {
+                flex-wrap: wrap;
+            }
+
+            #categorias
+            {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+        }
+
+        @media ( min-width: 768px) and (  max-width: 1023px ) 
+        {
+            #imagensCategoria
+            {
+                flex-wrap: wrap;
+            }
+
+            #categorias
+            {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        @media ( max-width: 767px ) 
+        {
+            #imagensCategoria
+            {
+                flex-wrap: wrap;
+            }
+
+            #categorias
+            {
+                flex-wrap: wrap;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            #futter
+            {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }

@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            min-height: 100dvh;
+            overflow-x: hidden;
+            font-family: 'Poppins', sans-serif;
+            background-color: #000000;
+            background-image: url("../img/fundo3.jfif");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        .content {
+            display: flex;
+            width: 100%;
+            min-height: 100dvh;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Lado esquerdo */
+        .left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+            color: #F2E9DF;
+            font-size: 20px;
+            margin-top: -160px;
+            text-shadow: 2px 2px 15px #00000083;
+
+        }
+
+        /* Logo da Creaive'S */
+        .left img {
+            width: 350px;
+            height: auto;
+        }
+
+        .left p{
+            margin-top: -50px;
+        }
+
+        .left h1{
+            margin-top: -50px;
+        }
+
+        /* Lado direito */
+        .rigth {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+        }
+
+        /* Área do formulário */
+        .contentcardlogin {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background-color: #f2e9ded3;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 90px;
+        }
+
+        .cardlogin {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 45px;
+            width: 100%;
+            background: transparent;
+            border-radius: 25px;
+        }
+
+        .cardlogin img {
+            width: 60%;
+            height: auto;
+
+        }
+
+        .legenda {
+            color: #48584C;
+            font-size: 10px;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .cardlogin p {
+            
+            color: #48584C;
+            font-size: 16px;
+            text-align: center;
+            margin-top: -60px;
+            margin-bottom: 10px;
+        }
+
+        .cardlogin form {
+            width: 100%;
+        }
+
+        .contentinput {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 12px;
+            width: 100%;
+            margin-top: 0;
+        }
+
+        .inputcard {
+            width: 100%;
+            height: 55px;
+            padding: 0 20px;
+            background-color: #48584C;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            border-radius: 22px;
+            border: none;
+            outline: none;
+        }
+
+        .inputcard[type="password"] {
+            background-color: #B47F66;
+        }
+
+        .inputcard::placeholder {
+            color: #E2D5C9;
+        }
+
+        .contentinput>a {
+            align-self: flex-start;
+            color: #B47F66;
+            margin: 0;
+        }
+
+        .btnlogin {
+            width: 100%;
+            min-height: 50px;
+            padding: 8px;
+            margin-top: 12px;
+            background-color: #E2D5C9;
+            color: #71834D;
+            font-family: 'Poppins', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            border: 1px solid #9B9287;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btnlogin:hover {
+            background-color: #71834D;
+            color: white;
+        }
+
+        .contentinput>p {
+            margin: 0;
+        }
+
+        .cadastro {
+            color: #B47F66;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .contentinput>p {
+            margin: 0;
+        }
+
+        .contentinput>a {
+            margin: 0;
+            color: #B47F66;
+        }
+
+        .contentinput .cadastro {
+            margin-top: 0;
+            color: #B47F66;
+        }
+
+        /* Telas menores */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+
+            .left {
+                width: 100%;
+                height: auto;
+                padding: 25px 0 10px;
+            }
+
+            .left img {
+                width: 220px;
+            }
+
+            .rigth {
+                width: 100%;
+                min-height: auto;
+            }
+
+            .contentcardlogin {
+                width: 100%;
+                min-height: auto;
+                padding: 20px 0 40px;
+                border-radius: 35px 35px 0 0;
+            }
+
+            .cardlogin {
+                width: 100%;
+                min-height: auto;
+                padding: 25px;
+            }
+        }

@@ -1,0 +1,236 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+ * {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     width: 100%;
+     min-height: 100dvh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     overflow-x: hidden;
+     font-family: 'Poppins', sans-serif;
+     background-color: #000000;
+     background-image: url("../img/fundo3.jfif");
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+     padding: 30px;
+ }
+
+ form {
+     width: 100%;
+     max-width: 790px;
+     min-height: 500px;
+     background-color: #f2e9ded3;
+     backdrop-filter: blur(10px);
+     -webkit-backdrop-filter: blur(10px);
+     border-radius: 80px;
+     padding: 35px 38px 45px;
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     align-content: center;
+     gap: 30px;
+ }
+
+ .cabecalho {
+     grid-column: 1 / 3;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     width: 100%;
+ }
+
+ .nome {
+     grid-column: 1 / 3;
+     grid-row: 2;
+ }
+
+ .telefone {
+     grid-column: 1;
+     grid-row: 3;
+ }
+
+ .email {
+     grid-column: 2;
+     grid-row: 3;
+ }
+
+ .senha:nth-of-type(5) {
+     grid-column: 1;
+     grid-row: 4;
+ }
+
+ .senha:nth-of-type(6) {
+     grid-column: 2;
+     grid-row: 4;
+ }
+
+
+
+ .cabecalho img {
+     display: block;
+     width: 500px;
+     height: 270px;
+     margin-top: -50px;
+ }
+
+ .cabecalho p {
+     color: #85876F;
+     font-size: 20px;
+     text-align: center;
+     margin-top: -100px;
+ }
+
+ .campo {
+     height: 60px;
+     width: 100%;
+     display: flex;
+     align-items: center;
+     gap: 15px;
+     padding: 0 18px;
+     border-radius: 24px;
+     background-color: #626C60;
+ }
+
+ .campo svg {
+     width: 27px;
+     height: 27px;
+     flex-shrink: 0;
+     color: #FFFFFF;
+ }
+
+ .campo input {
+     width: 100%;
+     min-width: 0;
+     height: 100%;
+     padding: 0;
+     border: none;
+     outline: none;
+     background: transparent;
+     color: #FFFFFF;
+     font-family: 'Poppins', sans-serif;
+     font-size: 14px;
+     box-shadow: none;
+ }
+
+ .campo input::placeholder {
+     color: #D0D1C9;
+     opacity: 1;
+ }
+
+ .campo input:focus {
+     box-shadow: none;
+ }
+
+ .telefone,
+ .email {
+     background-color: #C19A82;
+ }
+
+ input {
+     width: 100%;
+     height: 60px;
+     border: none;
+     outline: none;
+     border-radius: 24px;
+     padding: 0 25px;
+     font-family: 'Poppins', sans-serif;
+     font-size: 14px;
+     color: #FFFFFF;
+     background-color: #626C60;
+     transition: 0.3s;
+ }
+
+ input::placeholder {
+     color: #D0D1C9;
+     opacity: 1;
+ }
+
+ input:focus {
+     box-shadow: 0 0 0 2px #8B916C;
+ }
+
+ input[name="nome"] {
+     grid-column: 1 / 3;
+ }
+
+ input[name="telefone"],
+ input[name="email"] {
+     background-color: #C19A82;
+ }
+
+ input[type="submit"] {
+     grid-column: 1 / 3;
+     justify-self: center;
+     width: 48%;
+     height: 48px;
+     border: 1.5px solid #8B916C;
+     border-radius: 30px;
+     background-color: #E2D5C9;
+     color: #71834B;
+     font-size: 27px;
+     font-weight: 700;
+     padding: 0 15px;
+     cursor: pointer;
+     transition: 0.3s;
+     grid-row: 5;
+ }
+
+
+ input[type="submit"]:hover {
+     background-color: #71834B;
+     color: #FFFFFF;
+ }
+
+ br {
+     display: none;
+ }
+
+ @media (max-width: 600px) {
+     body {
+         padding: 20px;
+     }
+
+     form {
+         grid-template-columns: 1fr;
+         gap: 20px;
+         padding: 35px 25px;
+         border-radius: 45px;
+     }
+
+     .cabecalho {
+         grid-column: 1;
+     }
+
+     .cabecalho img {
+         width: 250px;
+     }
+
+     input[name="nome"],
+     input[type="submit"] {
+         grid-column: 1;
+     }
+
+     form::before {
+         font-size: 42px;
+         margin-bottom: -20px;
+     }
+
+     input {
+         height: 55px;
+         font-size: 13px;
+     }
+
+     input[type="submit"] {
+         width: 80%;
+         font-size: 22px;
+         margin-top: 5px;
+     }
+ }

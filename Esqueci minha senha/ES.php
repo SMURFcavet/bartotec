@@ -22,7 +22,7 @@ if (isset($_POST['email'])) {
 
             mysqli_query($con, "UPDATE cadastro SET senha='$senha', senha_confirme='$senha_confirme' WHERE email='$email'");
 
-    header("Location:login.html");
+    header("Location:../Tela login/login.html");
 
         } else {
 
@@ -34,21 +34,4 @@ if (isset($_POST['email'])) {
 
 ?>
 
-<center>
 
-<form action="" method="POST">
-
-    E-mail
-    <input type="email" id="email"required placeholder="Digite seu e-mail" name="email" maxlength="50"/>
-    <br>
-    Senha
-    <input type="password" placeholder="Digite sua nova senha" name="senha" required maxlength="10"/>
-    <br>
-    Confirmação Senha
-    <input type="password" placeholder="Confirme sua nova senha" name="senha_confirme" required maxlength="10"/>
-    <br>
-    <input type="submit" value="Atualizar"/>
-
-</form>
-
-</center>

@@ -1,22 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de Login</title>
+    <link rel="icon" type="image/png" href="../logo/logo_verdep.png">
+    <link rel="stylesheet" href="./style_login" />
 </head>
+
 <body>
-    <center>
-    <form action="login.php" method="POST">
-        E-mail<input type="email" id="email" required
-            placeholder="Digite seu e-mail" name="email" required maxlength="50">
-        <br>
-        Senha<input type="password" placeholder="Digite sua senha" name="senha" required maxlength="10">
-        <br>
-        <input type="submit" value="Logar">
-        <br>
-        <a href="ES.php">Esqueci minha senha</a>
-    </form>
-</center>
+    <div class="content">
+
+        <div class="left">
+            <h1>Bem Vindo ao</h1>
+            <img src="../logo/logo_branca.png" alt="Creative'S">
+            <p>Seu ambiente dos sonhos começa aqui.</p>
+
+        </div>
+
+        <div class="rigth">
+            <div class="contentcardlogin">
+                <div class="cardlogin">
+
+                    <img src="../logo/logo_verde.png">
+                    <div class="legenda">
+                    <p>Seu ambiente dos sonhos começa aqui.</p>
+                    </div>
+
+                    <form action="./login.php" method="POST">
+                        <div class="contentinput">
+                            <input class="inputcard" type="email" name="email" placeholder="Digite seu e-mail" required>
+
+                            <input class="inputcard" type="password" name="senha" placeholder="Digite sua senha"
+                                required>
+
+                            <a href="../Esqueci minha senha/Esqueci_senha.html">Esqueci minha senha</a>
+
+                            <button class="btnlogin" type="submit">
+                                LOGIN
+                            </button>
+
+                            <p>Não tem conta?</p>
+                            <div class="cadastro">
+                                <a href="../Tela Cadastro/tela_cadastro.html">Criar uma conta</a>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
 </body>
+
 </html>

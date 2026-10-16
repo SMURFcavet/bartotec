@@ -1,27 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela cadastro</title>
+    <link rel="icon" type="image/png" href="../logo/logo_verdep.png">
+    <link rel="stylesheet" href="./style_cadastro.css" />
 </head>
+
 <body>
-    <center>
-     
-    <form action="barto.php" method="POST">
-        Nome Completo<input type="text" placeholder="Digite seu nome" name="nome" required maxlength="100">
-        <br>
-        Telefone<input type="text" placeholder="Digite seu telefone" name="telefone" required maxlength="20">
-        <br>
-        E-mail<input type="email" id="email" required
-            placeholder="Digite seu e-mail" name="email" required maxlength="50">
-        <br>
-        Senha<input type="password" placeholder="Digite sua senha" name="senha" required maxlength="10">
-        <br>
-        Confirmação Senha<input type="password" placeholder="Corfirme sua senha" name="senha2" required maxlength="10">
-        <br>
-        <input type="submit" value="Criar Conta">
+
+    <form action="./barto.php" method="POST">
+
+        <div class="cabecalho">
+            <img src="../logo/logo_verde.png" alt="Creative'S">
+            <p>Seu ambiente dos sonhos começa aqui.</p>
+        </div>
+
+         <div class="campo nome">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="8" r="4" fill="currentColor"/>
+            <path d="M4 21v-2a8 8 0 0 1 16 0v2Z" fill="currentColor"/>
+        </svg>
+        <input type="text" placeholder="Digite o seu nome completo" name="nome" required maxlength="100">
+        </div>
+
+        <div class="campo telefone">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor"
+                d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11 11 0 0 0 3.4.54 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17.8 17.8 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11 11 0 0 0 .54 3.4 1 1 0 0 1-.25 1Z"/>
+        </svg>
+        <input type="text" placeholder="Digite o seu telefone" name="telefone" required maxlength="20">
+        </div>
+
+        <div class="campo email">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor"
+                d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm9 8L4 7v10h16V7Z"/>
+            <path d="m3 6 9 8 9-8" fill="none"
+                stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <input type="email" id="email" placeholder="Digite o seu e-mail" name="email" required maxlength="50">
+        </div>
+
+         <div class="campo senha">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="4" y="10" width="16" height="12" rx="3"
+                fill="currentColor"/>
+            <path d="M7 10V7a5 5 0 0 1 10 0v3"
+                fill="none" stroke="currentColor" stroke-width="3"/>
+            <circle cx="12" cy="15" r="1.5" fill="#626C60"/>
+            <path d="M12 16v2" stroke="#626C60" stroke-width="2"/>
+        </svg>
+        <input type="password" placeholder="Digite a sua senha" name="senha" required maxlength="10">
+        </div>
+
+        <div class="campo senha">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="4" y="10" width="16" height="12" rx="3"
+                fill="currentColor"/>
+            <path d="M7 10V7a5 5 0 0 1 10 0v3"
+                fill="none" stroke="currentColor" stroke-width="3"/>
+            <circle cx="12" cy="15" r="1.5" fill="#626C60"/>
+            <path d="M12 16v2" stroke="#626C60" stroke-width="2"/>
+        </svg>
+        <input type="password" placeholder="Confirme a sua senha" name="senha2" required maxlength="10">
+        </div>
+
+
+        <input type="submit" value="Criar Conta" />
+
     </form>
-</center>
+
 </body>
+
 </html>

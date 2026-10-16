@@ -17,7 +17,7 @@ if ($senha != $csenha) {
 
     mysqli_query($con, $sql);
 
-header("Location:login.php");
+header("Location:../Tela Login/login.php");
 }
 
 ?>

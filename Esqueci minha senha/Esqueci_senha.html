@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esqueci minha Senha</title>
+    <link rel="icon" type="image/png" href="../logo/logo_verdep.png">
+    <link rel="stylesheet" href="../Esqueci minha senha/style_esq_senha.css" />
+</head>
+
+<body>
+
+    <form action="./ES.php" method="POST">
+
+        <img class="logo" src="../logo/logo_verde.png" alt="Creative'S">
+
+        <p class="descricao">
+            Para redefinir a sua senha, informe seu e-mail<br>
+            que foi cadastrado na sua conta e a sua nova senha.
+        </p>
+
+        <div class="campo email">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 5h18v14H3z" fill="white" />
+                <path d="m3 6 9 7 9-7" fill="none" stroke="#626D62" stroke-width="1.5" />
+            </svg>
+
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" maxlength="50" required>
+        </div>
+
+        <div class="senhas">
+            <div class="campo senha">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="5" y="10" width="14" height="12" rx="3" fill="white" />
+                    <path d="M8 10V7a4 4 0 0 1 8 0v3" fill="none" stroke="white" stroke-width="2.5"
+                        stroke-linecap="round" />
+                    <circle cx="12" cy="15" r="1.5" fill="#C29880" />
+                    <path d="M12 16v2" stroke="#C29880" stroke-width="1.5" />
+                </svg>
+                <input type="password" name="senha" placeholder="Digite a sua senha" maxlength="10" required>
+            </div>
+
+            <div class="campo senha">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="5" y="10" width="14" height="12" rx="3" fill="white" />
+                    <path d="M8 10V7a4 4 0 0 1 8 0v3" fill="none" stroke="white" stroke-width="2.5"
+                        stroke-linecap="round" />
+                    <circle cx="12" cy="15" r="1.5" fill="#C29880" />
+                    <path d="M12 16v2" stroke="#C29880" stroke-width="1.5" />
+                </svg>
+                <input type="password" name="senha_confirme" placeholder="Confirme a sua senha" maxlength="10" required>
+            </div>
+        </div>
+
+        <input type="submit" value="Redefinir">
+
+    </form>
+
+</body>
+
+</html>

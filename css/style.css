@@ -259,7 +259,7 @@ body {
             display: none;
         }
 
-        #feedbackImgAntes {
+        .feedbackImgAntes {
             height: 4vh;
             width: auto;
             margin-top: 1vh;

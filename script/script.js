@@ -5,6 +5,8 @@ const sobreNos = document.getElementById("sobreNos")
         const faleConosco = document.getElementById("faleConosco")
         const feedback = document.getElementById("feedback")
 
+        const coracao = document.querySelectorAll(".feedbackImgAntes")
+
         function mostrarConteudo(conteudoClicado)
         {
 
@@ -97,19 +99,41 @@ const sobreNos = document.getElementById("sobreNos")
         function trocarImagem(imagem) 
         {
 
-            if ( imagem.src.includes("Favorite.png") )
+            for ( let i = 0; i < coracao.length; i++ )
             {
-                imagem.src = "../img/futter/coracaoFeedback.png";
-                imagem.style.height = "3vh";
-                imagem.style.width = "auto";
-                imagem.style.marginTop =  "1.5vh";
+                if (coracao[i] === imagem)
+                {
+
+                    if ( imagem.src.includes("Favorite.png") )
+                    {
+
+                        imagem.src = "../img/futter/coracaoFeedback.png";
+                        imagem.style.height = "3vh";
+                        imagem.style.width = "auto";
+                        imagem.style.marginTop =  "1.5vh";
+
+                    }
+
+                    else 
+                    {
+                        imagem.src = "../img/header/Favorite.png";
+                    }
+
+                }
+
             }
 
-            else 
+            let quantidade = 0
+
+            for ( let i = 0; i < coracao.length; i++ )
             {
-                imagem.src = "../img/header/Favorite.png";
+                if (coracao[i].src.includes("coracaoFeedback.png"))
+                {
+                    quantidade++
+                }
             }
-           
+
+            document.getElementById("quantidade_coracao").value = quantidade
             
         }
 

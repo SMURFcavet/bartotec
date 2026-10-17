@@ -254,14 +254,22 @@
             <a id = "linkFutter" onclick="mostrarConteudo('feedback')">Feedback</a>
             <div id = "feedback">
 
-                <img src = "../img/header/Favorite.png" id = "feedbackImgAntes" onclick="trocarImagem(this)">
-                <img src = "../img/header/Favorite.png" id = "feedbackImgAntes" onclick="trocarImagem(this)">
-                <img src = "../img/header/Favorite.png" id = "feedbackImgAntes" onclick="trocarImagem(this)">
-                <img src = "../img/header/Favorite.png" id = "feedbackImgAntes" onclick="trocarImagem(this)">
+                <form action="../php/salvarFeedback.php" method="POST">
+
+                    <input type="hidden" name="quantidade_coracao" id="quantidade_coracao" value="0">
+
+                    <input type="hidden" name="pagina_origem" value="categoriasEmDestaque/rustico.html">
+
+                    <img src = "../img/header/Favorite.png" class = "feedbackImgAntes" onclick="trocarImagem(this)">
+                    <img src = "../img/header/Favorite.png" class = "feedbackImgAntes" onclick="trocarImagem(this)">
+                    <img src = "../img/header/Favorite.png" class = "feedbackImgAntes" onclick="trocarImagem(this)">
+                    <img src = "../img/header/Favorite.png" class = "feedbackImgAntes" onclick="trocarImagem(this)">
 
             </div>
 
-            <button id = "botaoFeedback">Enviar Feedback</button>
+                    <button id = "botaoFeedback">Enviar Feedback</button>
+
+                </form>
 
         </div>
             

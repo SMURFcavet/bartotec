@@ -29,7 +29,7 @@ body {
             height: 12vh;
             width: auto;
             margin-left: 2vw;
-            margin-top: 3vh;
+            margin-top: 4.5vh;
         }
 
         #favorite {
@@ -284,6 +284,45 @@ body {
             cursor: pointer;
             display: none;
         }
+
+         #imgPerfil {
+            height: 24vh;
+            width: auto;
+            margin-top: 8vh;
+            border-radius: 50%;
+            border: 8px solid #636A49;
+        }
+
+        #textPerfil {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #grupoSenha {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 8px;
+        }
+
+        #dados {
+            color: #9B5A3C;
+        }
+
+        #alinhamento {
+            align-self: flex-start;
+            margin-left: 10%;
+            width: 20%;
+        }
+
+        #feedbackPerfil {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
 
         @media ( min-width: 1024px ) 
         {

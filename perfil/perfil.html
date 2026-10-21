@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do usuário</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css?teste=2">
+    
+</head>
+
+<body>
+
+
+    <div id = "header">
+
+        <img src = "../img/header/logoCreative.png" id = "logo">
+
+        <div id = "headerIcons">
+
+        <img src = "../img/header/Favorite.png" id = "favorite">
+
+        <img src = "../img/header/Profile.png" id = "perfil">
+
+        </div>
+
+    </div>
+
+    <div id = "main">
+
+
+        <img src = "../img/perfil/user2.png" id = "imgPerfil">
+
+        <div id = "alinhamento">
+
+        <h1 id = "dados">Meus dados</h1>
+
+        <div id = "textPerfil">
+
+           <div id = "grupoSenha">
+
+                <p id = "titlePerfil">Email: </p>
+                <p id = "email"></p>
+
+            </div>
+
+            <div id = "grupoSenha">
+
+                <p id = "titlePerfil">Telefone: </p>
+                <p id = "telefone"></p>
+
+            </div>
+
+            <div id = "grupoSenha">
+
+                <p id = "titlePerfil">Senha criptografada: </p>
+                <p id = "senha">••••••••</p>
+                <img src = "../img/perfil/naoVisivel.png" id = "naoVisivel" onclick="mostrarSenha(this)">
+
+            </div>
+
+            <div id = "feedbackPerfil">
+
+            </div>
+
+        </div>
+
+        <h1 id = "dados">Meus estilos</h1>
+
+        </div>
+
+        <div id = "categorias">
+
+                <a href = "../explorarCategorias/minimalista.html" id = "categoria">Minimalista</a>
+
+                <a href = "../explorarCategorias/moderno.html" id = "categoria">Moderno</a>
+
+                <a href = "../explorarCategorias/rustico.html" id = "categoria">Rústico</a>
+
+                <a href = "../explorarCategorias/industrial.html" id = "categoria">Industrial</a>
+
+        </div>
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div id = "futter">
+
+        <div id = "caixa1Futter">
+
+            <img src = "../img/header/logoCreative.png" id = "logoFutter">
+            <p id = "textoFutter">Seu ambiente dos sonhos <br> começa aqui </p>
+
+        </div>
+
+        <div id = "caixa2Futter">
+
+            <p id = "titleFutter">Instituicional</p>
+            <a id = "linkFutter" onclick="mostrarConteudo('sobreNos')">Sobre nós</a>
+            <div id = "sobreNos">
+
+                <p id = "textoFutter2">Somos uma empresa dedicada a te inpirar a  <br>
+                deixar sua casa de modo a combinar com você, <br> e te ajudar a descobrir
+                seus estilos favoritos.</p>
+
+            </div>
+
+            <a id = "linkFutter" onclick="mostrarConteudo('comoFunciona')">Como funciona</a>
+            <div id = "comoFunciona">
+
+                <p id = "textoFutter2">A Creative'S ajuda você a descobrir seu  <br>
+                estilo de decoração por meio de categorias e <br> imagens inspiradoras 
+                para transformar seus <br> ambientes.</p>
+
+            </div>
+
+            <a id = "linkFutter" onclick="mostrarConteudo('politicaPrivacidade')">Política de privacidade</a>
+            <div id = "politicaPrivacidade">
+
+                <p id = "textoFutter2">Respeitamos sua privacidade e buscamos  <br>
+                proteger seus dados pessoais. As <br> informações fornecidas são utilizadas apenas 
+                <br> para melhorar sua experiência na Creative'S, <br> sempre com responsabilidade e segurança.</p>
+
+            </div>
+
+        </div>
+
+        <div id = "caixa2Futter">
+
+            <p id = "titleFutter">Ajuda</p>
+
+            <a id = "linkFutter" onclick="mostrarConteudo('centralAjuda')">Central de ajuda</a>
+            <div id = "centralAjuda">
+
+                <p id = "textoFutter2">Precisa de ajuda? Na Central de Ajuda da  <br>
+                Creative's, você encontra orientações <br> para explorar ambientes, descobrir 
+                <br> inspirações e transformar suas ideias <br> em realidade. </p>
+
+            </div>
+            
+            <a id = "linkFutter" onclick="mostrarConteudo('faleConosco')">Fale conosco</a>
+            <div id = "faleConosco">
+
+                <p id = "textoFutter2">Tem dúvidas, sugestões ou precisa de  <br>
+                ajuda? Entre em contato com a equipe <br> Creative's. Estamos à disposição para 
+                <br> ouvir você! 
+                <br> <br> E-mail: contato@creatives.com.br 
+                <br> Telefone: (11) 4002-8922 </p>
+
+            </div>
+
+            <a id = "linkFutter" onclick="mostrarConteudo('feedback')">Feedback</a>
+            <div id = "feedback">
+                <form action="../php/salvarFeedback.php" method="POST">
+
+                    <input type="hidden" name="quantidade_coracao" id="quantidade_coracao" value="0">
+
+                    <input type="hidden" name="pagina_origem" value="perfil/perfil.html">
+
+                    <img src = "../img/header/Favorite.png" class = "feedbackImgAntes" onclick="trocarImagem(this)">
+                    <img src = "../img/header/Favorite.png" class = "feedbackImgAntes" onclick="trocarImagem(this)">
+                    <img src = "../img/header/Favorite.png" class = "feedbackImgAntes" onclick="trocarImagem(this)">
+                    <img src = "../img/header/Favorite.png" class = "feedbackImgAntes" onclick="trocarImagem(this)">
+
+            </div>
+
+                    <button id = "botaoFeedback">Enviar Feedback</button>
+
+                </form>
+
+        </div>
+            
+
+        <div id = "caixa2Futter">
+
+            <p id = "titleFutter">Siga-nos</p>
+
+            <div id = "imgFutter">
+
+                <img src = "../img/futter/whats.png" id = "socialFutter" >
+                <img src = "../img/futter/insta.png" id = "socialFutter" >
+                <img src = "../img/futter/x.png" id = "socialFutters" >
+                <img src = "../img/futter/face.png" id = "socialFutter" >
+
+            </div>
+
+            <p id = "textoFutter2"> © 2026 Creative´S. Todos os direitos <br> reservados</p>
+
+        </div>
+
+    </div>
+
+     <script src="../script/script.js"></script>
+    
+</body>
+</html>

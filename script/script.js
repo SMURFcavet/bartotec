@@ -153,3 +153,61 @@ const sobreNos = document.getElementById("sobreNos")
             }
             
         }
+
+        let email = document.getElementById("email")
+        let telefone = document.getElementById("telefone")
+        let feedbackUser = document.getElementById("feedbackPerfil")
+        let senha = document.getElementById("senha")
+
+        fetch('../php/perfil.php')
+
+        .then( resposta => resposta.json() )
+        .then( dados => { 
+            
+        email.textContent = dados.email
+        telefone.textContent = dados.telefone
+        
+
+        if ( dados.quantidade_coracao !== null )
+                {
+                    feedbackUser.textContent = dados.quantidade_coracao
+                }
+
+                else
+                {
+                    feedbackUser.textContent = "Feedback pendente"
+                }
+
+        } );
+
+
+        function mostrarSenha(mostrar)
+        {
+
+            if (mostrar.src.includes("naoVisivel"))
+            {
+                mostrar.src = "../img/perfil/visivel.png";
+
+                fetch('../php/perfil.php')
+
+                .then( resposta => resposta.json() )
+                .then( dados => { 
+                 
+                senha.textContent = dados.senha 
+            
+                } );
+                
+            }
+
+            else
+            {
+                mostrar.src = "../img/perfil/naoVisivel.png";
+                senha.textContent = "••••••••"
+            }
+
+        }
+
+
+
+        
+        

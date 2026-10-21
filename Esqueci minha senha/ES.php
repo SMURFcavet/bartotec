@@ -20,18 +20,20 @@ if (isset($_POST['email'])) {
 
         if ($resultado) {
 
-            mysqli_query($con, "UPDATE cadastro SET senha='$senha', senha_confirme='$senha_confirme' WHERE email='$email'");
+            $senha = password_hash($senha, PASSWORD_DEFAULT);
 
-    header("Location:../Tela login/login.html");
+            mysqli_query($con, "UPDATE cadastro SET senha='$senha', senha_confirme='$senha' WHERE email='$email'");
+
+            header("Location:../Tela login/login.html");
+            exit;
 
         } else {
 
-            echo "E-mail não encontrado.";
+            $mensagem = "Email incorreto";
+            echo "<script>alert('$mensagem'); window.location.href = 'Esqueci_senha.html';</script>";
 
         }
     }
 }
 
 ?>
-
-

@@ -193,6 +193,11 @@
      display: none;
  }
 
+ .voltar {
+    color:#71834B;
+
+ }
+
  @media (max-width: 600px) {
      body {
          padding: 20px;

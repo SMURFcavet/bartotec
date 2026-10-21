@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creative'S</title>
+  <link rel="icon" type="image/png" href="../logo/logo_verdep.png">
+  <link rel="stylesheet" href="./style_index.css" />
+</head>
+<body>
+
+    <header>
+    <div class = "header">
+
+        <img src = "../img/header/logoCreative.png" class = "logo">
+
+        <div id = "headerIcons">
+
+        <img src = "../img/header/Favorite.png" class = "favorite">
+
+        <img src = "../img/header/Profile.png" class = "perfil">
+
+    </div>
+    </header>
+
+
+  <section class="hero-section">
+    <div class="hero-carousel" id="heroCarousel">
+      <!-- Slide 1 -->
+      <div class="hero-slide active" style="background-image: url('CAMINHO_DA_SUA_IMAGEM_1.jpg');">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <h1>Transforme<br>seu espaço</h1>
+          <p>Gostou do ambiente?<br>Leve para casa!</p>
+          <a href="#" class="btn-primary">Explorar ambientes</a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="hero-slide" style="background-image: url('CAMINHO_DA_SUA_IMAGEM_2.jpg');">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <h1>Transforme<br>seu espaço</h1>
+          <p>Inspire-se com novidades<br>para a sua casa!</p>
+          <a href="#" class="btn-primary">Explorar ambientes</a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="hero-slide" style="background-image: url('CAMINHO_DA_SUA_IMAGEM_3.jpg');">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <h1>Transforme<br>seu espaço</h1>
+          <p>Design moderno e aconchego<br>em cada detalhe.</p>
+          <a href="#" class="btn-primary">Explorar ambientes</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-dots" id="carouselDots">
+      <span class="dot active" data-slide="0"></span>
+      <span class="dot" data-slide="1"></span>
+      <span class="dot" data-slide="2"></span>
+    </div>
+  </section>
+
+  <main class="main-content">
+
+    <!-- SEÇÃO: Explore por categorias -->
+    <section class="section">
+      <div class="section-header">
+        <span class="svg-icon section-icon" data-svg="section-category"></span>
+        <h2>Explore por categorias</h2>
+      </div>
+
+      <div class="categories-row">
+        <div class="category-card">
+          <span class="svg-icon" data-svg="cat-minimalismo"></span>
+          <span>Minimalismo</span>
+        </div>
+        <div class="category-card">
+          <span class="svg-icon" data-svg="cat-moderno"></span>
+          <span>Moderno</span>
+        </div>
+        <div class="category-card">
+          <span class="svg-icon" data-svg="cat-rustico"></span>
+          <span>Rústico</span>
+        </div>
+        <div class="category-card">
+          <span class="svg-icon" data-svg="cat-industrial"></span>
+          <span>Industrial</span>
+        </div>
+
+        <button class="nav-next-btn" aria-label="Ver tudo">
+          <span class="svg-icon" data-svg="arrow-right"></span>
+        </button>
+      </div>
+      <div class="nav-label">Ver tudo</div>
+    </section>
+
+    <!-- SEÇÃO: Encontre por cômodos -->
+    <section class="section">
+      <div class="section-header">
+        <span class="svg-icon section-icon" data-svg="section-home"></span>
+        <h2>Encontre por cômodos</h2>
+      </div>
+
+      <div class="grid-cards">
+        <div class="room-card">
+          <div class="card-img-placeholder" style="background-image: url('SUA_IMAGEM_SALA.jpg');">
+            <!-- [INSIRA A IMAGEM DA SALA AQUI] -->
+          </div>
+          <div class="card-footer">
+            <span class="svg-icon" data-svg="room-sala"></span>
+            <span>Sala de estar</span>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <div class="card-img-placeholder" style="background-image: url('SUA_IMAGEM_QUARTO.jpg');">
+            <!-- [INSIRA A IMAGEM DO QUARTO AQUI] -->
+          </div>
+          <div class="card-footer">
+            <span class="svg-icon" data-svg="room-quarto"></span>
+            <span>Quarto</span>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <div class="card-img-placeholder" style="background-image: url('SUA_IMAGEM_COZINHA.jpg');">
+            <!-- [INSIRA A IMAGEM DA COZINHA AQUI] -->
+          </div>
+          <div class="card-footer">
+            <span class="svg-icon" data-svg="room-cozinha"></span>
+            <span>Cozinha</span>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <div class="card-img-placeholder" style="background-image: url('SUA_IMAGEM_JANTAR.jpg');">
+            <!-- [INSIRA A IMAGEM DA SALA DE JANTAR AQUI] -->
+          </div>
+          <div class="card-footer">
+            <span class="svg-icon" data-svg="room-jantar"></span>
+            <span>Sala de jantar</span>
+          </div>
+        </div>
+
+        <div class="nav-btn-wrapper">
+          <button class="nav-next-btn" aria-label="Ver mais cômodos">
+            <span class="svg-icon" data-svg="arrow-right"></span>
+          </button>
+          <div class="nav-label">Ver mais</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: Estilos em destaque -->
+    <section class="section">
+      <div class="section-header">
+        <span class="svg-icon section-icon" data-svg="section-star"></span>
+        <h2>Estilos em destaque</h2>
+      </div>
+
+      <div class="grid-cards">
+        <div class="style-card">
+          <div class="card-img-placeholder" style="background-image: url('SUA_IMAGEM_MINIMALISTA.jpg');">
+            <!-- [INSIRA A IMAGEM DO ESTILO MINIMALISTA AQUI] -->
+          </div>
+          <div class="card-footer-simple">
+            <span>Minimalista</span>
+          </div>
+        </div>
+
+        <div class="style-card">
+          <div class="card-img-placeholder" style="background-image: url('SUA_IMAGEM_INDUSTRIAL.jpg');">
+            <!-- [INSIRA A IMAGEM DO ESTILO INDUSTRIAL AQUI] -->
+          </div>
+          <div class="card-footer-simple">
+            <span>Industrial</span>
+          </div>
+        </div>
+
+        <div class="style-card">
+          <div class="card-img-placeholder" style="background-image: url('SUA_IMAGEM_JAPANDI.jpg');">
+            <!-- [INSIRA A IMAGEM DO ESTILO JAPANDI AQUI] -->
+          </div>
+          <div class="card-footer-simple">
+            <span>Japandi</span>
+          </div>
+        </div>
+
+        <div class="style-card">
+          <div class="card-img-placeholder" style="background-image: url('SUA_IMAGEM_RUSTICA.jpg');">
+            <!-- [INSIRA A IMAGEM DO ESTILO RÚSTICO AQUI] -->
+          </div>
+          <div class="card-footer-simple">
+            <span>Rústico</span>
+          </div>
+        </div>
+
+        <div class="nav-btn-wrapper">
+          <button class="nav-next-btn" aria-label="Ver mais estilos">
+            <span class="svg-icon" data-svg="arrow-right"></span>
+          </button>
+          <div class="nav-label">Ver mais</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: O que nossos clientes dizem -->
+    <section class="section">
+      <div class="section-header">
+        <span class="svg-icon section-icon" data-svg="section-chat"></span>
+        <h2>O que nossos clientes dizem</h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- Depoimento 1 -->
+        <div class="testimonial-card">
+          <div class="stars" data-svg="stars-5"></div>
+          <p class="testimonial-text">"Com a Creative'S encontrei o quarto dos meus sonhos! Amei ver o ambiente completo e já comprar todos os móveis que estavam na foto."</p>
+          <div class="client-info">
+            <div class="avatar-placeholder" style="background-image: url('SUA_IMAGEM_CLIENTE_1.jpg');">
+              <!-- [INSIRA A FOTO DA ELEANOR AQUI] -->
+            </div>
+            <div>
+              <span class="client-name">Eleanor</span> - <span class="client-city">São Paulo - SP</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Depoimento 2 -->
+        <div class="testimonial-card">
+          <div class="stars" data-svg="stars-5"></div>
+          <p class="testimonial-text">"O site é super intuitivo e cheio de inspirações. Agora ficou muito mais fácil decorar minha casa!"</p>
+          <div class="client-info">
+            <div class="avatar-placeholder" style="background-image: url('SUA_IMAGEM_CLIENTE_2.jpg');">
+              <!-- [INSIRA A FOTO DO BENJAMIN AQUI] -->
+            </div>
+            <div>
+              <span class="client-name">Benjamin S. Parker</span> - <span class="client-city">Curitiba - PR</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Depoimento 3 -->
+        <div class="testimonial-card">
+          <div class="stars" data-svg="stars-5"></div>
+          <p class="testimonial-text">"Qualidade, bom gosto e praticidade. A Creative'S realmente entende de aconchego."</p>
+          <div class="client-info">
+            <div class="avatar-placeholder" style="background-image: url('SUA_IMAGEM_CLIENTE_3.jpg');">
+              <!-- [INSIRA A FOTO DO MARCOS AQUI] -->
+            </div>
+            <div>
+              <span class="client-name">Marcos Carvalho</span> - <span class="client-city">Belo Horizonte - MG</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Depoimento 4 -->
+        <div class="testimonial-card">
+          <div class="stars" data-svg="stars-5"></div>
+          <p class="testimonial-text">"Amei os ambientes! Cada detalhe faz diferença e deixa tudo ainda mais bonito."</p>
+          <div class="client-info">
+            <div class="avatar-placeholder" style="background-image: url('SUA_IMAGEM_CLIENTE_4.jpg');">
+              <!-- [INSIRA A FOTO DA JOELMA AQUI] -->
+            </div>
+            <div>
+              <span class="client-name">Joelma Rocha</span> - <span class="client-city">Salvador - BA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+
+  <div class = "futter">
+
+        <div class = "caixa1Futter">
+
+            <img src = "../img/header/logoCreative.png" class = "logoFutter">
+            <p class = "textoFutter">Seu ambiente dos sonhos <br> começa aqui </p>
+
+        </div>
+
+        <div class = "caixa2Futter">
+
+            <p class = "titleFutter">Instituicional</p>
+            <a class = "linkFutter" onclick="mostrarConteudo('sobreNos')">Sobre nós</a>
+            <div class = "sobreNos">
+
+                <p class = "textoFutter2">Somos uma empresa dedicada a te inpirar a  <br>
+                deixar sua casa de modo a combinar com você, <br> e te ajudar a descobrir
+                seus estilos favoritos.</p>
+
+            </div>
+
+            <a class = "linkFutter" onclick="mostrarConteudo('comoFunciona')">Como funciona</a>
+            <div class = "comoFunciona">
+
+                <p class = "textoFutter2">A Creative'S ajuda você a descobrir seu  <br>
+                estilo de decoração por meio de categorias e <br> imagens inspiradoras 
+                para transformar seus <br> ambientes.</p>
+
+            </div>
+
+            <a class = "linkFutter" onclick="mostrarConteudo('politicaPrivacidade')">Política de privacidade</a>
+            <div class = "politicaPrivacidade">
+
+                <p class = "textoFutter2">Respeitamos sua privacidade e buscamos  <br>
+                proteger seus dados pessoais. As <br> informações fornecidas são utilizadas apenas 
+                <br> para melhorar sua experiência na Creative'S, <br> sempre com responsabilidade e segurança.</p>
+
+            </div>
+
+        </div>
+
+        <div class = "caixa2Futter">
+
+            <p class = "titleFutter">Ajuda</p>
+
+            <a class = "linkFutter" onclick="mostrarConteudo('centralAjuda')">Central de ajuda</a>
+            <div class = "centralAjuda">
+
+                <p class = "textoFutter2">Precisa de ajuda? Na Central de Ajuda da  <br>
+                Creative's, você encontra orientações <br> para explorar ambientes, descobrir 
+                <br> inspirações e transformar suas ideias <br> em realidade. </p>
+
+            </div>
+            
+            <a class = "linkFutter" onclick="mostrarConteudo('faleConosco')">Fale conosco</a>
+            <div class = "faleConosco">
+
+                <p class = "textoFutter2">Tem dúvidas, sugestões ou precisa de  <br>
+                ajuda? Entre em contato com a equipe <br> Creative's. Estamos à disposição para 
+                <br> ouvir você! 
+                <br> <br> E-mail: contato@creatives.com.br 
+                <br> Telefone: (11) 4002-8922 </p>
+
+            </div>
+
+            <a class = "linkFutter" onclick="mostrarConteudo('feedback')">Feedback</a>
+            <div class = "feedback">
+                <form action="../php/salvarFeedback.php" method="POST">
+
+                    <input type="hidden" name="quantidade_coracao" id="quantidade_coracao" value="0">
+
+                    <input type="hidden" name="pagina_origem" value="explorarCategorias/minimalista.html">
+
+                    <img src = "../img/header/Favorite.png" class = "feedbackImgAntes" onclick="trocarImagem(this)">
+                    <img src = "../img/header/Favorite.png" class = "feedbackImgAntes" onclick="trocarImagem(this)">
+                    <img src = "../img/header/Favorite.png" class = "feedbackImgAntes" onclick="trocarImagem(this)">
+                    <img src = "../img/header/Favorite.png" class = "feedbackImgAntes" onclick="trocarImagem(this)">
+
+            </div>
+
+                    <button class = "botaoFeedback">Enviar Feedback</button>
+
+                </form>
+
+        </div>
+            
+
+        <div class = "caixa2Futter">
+
+            <p class = "titleFutter">Siga-nos</p>
+
+            <div class = "imgFutter">
+
+                <img src = "../img/futter/whats.png" class = "socialFutter" >
+                <img src = "../img/futter/insta.png" class = "socialFutter" >
+                <img src = "../img/futter/x.png" class = "socialFutters" >
+                <img src = "../img/futter/face.png" class = "socialFutter" >
+
+            </div>
+
+            <p class = "textoFutter2"> © 2026 Creative´S. Todos os direitos <br> reservados</p>
+
+        </div>
+
+    </div>
+    </footer>
+
+  <script src="./script_index.js"></script>
+</body>
+</html>

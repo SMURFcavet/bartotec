@@ -4,8 +4,8 @@ use barto2026;
 create table cadastro(
 id_cadastro int not null auto_increment primary key,
 nome varchar(100) not null,
-telefone varchar(20),
-email varchar(50),
+telefone varchar(20)unique,
+email varchar(50) unique,
 senha varchar(10),
 senha_confirme varchar(10)
 );
@@ -19,3 +19,5 @@ create table feedback
 
     foreign key ( id_cadastro ) references cadastro(id_cadastro)
 );
+
+select*from feedback;

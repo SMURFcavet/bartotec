@@ -1,9 +1,7 @@
 <?php
 session_start();
 if(@$_SESSION['logado']==1){
-    ?>
-    <h1>Tela inicial</h1>
-    <?php
+    header("Location:../Tela Principal/index.html");
 }else{
     header("Location:login.html");
 }

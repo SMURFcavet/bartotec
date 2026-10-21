@@ -6,8 +6,8 @@ id_cadastro int not null auto_increment primary key,
 nome varchar(100) not null,
 telefone varchar(20)unique,
 email varchar(50) unique,
-senha varchar(10),
-senha_confirme varchar(10)
+senha varchar(225),
+senha_confirme varchar(225)
 );
 select*from cadastro;
 

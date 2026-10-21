@@ -9,15 +9,21 @@ $csenha = $_POST['senha2'];
 $con = mysqli_connect('localhost', 'root', '', 'barto2026');
 
 if ($senha != $csenha) {
-    echo "ERRO As senhas não são iguais!";
+    echo "<script>alert('As senhas não são iguais');window.location.href = 'tela_cadastro.html';</script>";
 } else {
 
+    $senha = password_hash($senha, PASSWORD_DEFAULT);
+
     $sql = "INSERT INTO cadastro (nome, telefone, email, senha, senha_confirme)
-    VALUES ('$nome', '$tel', '$email', '$senha', '$csenha')";
+    VALUES (?, ?, ?, ?, ?)";
 
-    mysqli_query($con, $sql);
+    $comando = mysqli_prepare($con, $sql);
+    mysqli_stmt_bind_param($comando, "sssss", $nome, $tel, $email, $senha, $senha);
 
-header("Location:../Tela Login/login.php");
+    mysqli_stmt_execute($comando);
+
+    header("Location:../Tela Login/login.php");
+    exit;
 }
 
 ?>

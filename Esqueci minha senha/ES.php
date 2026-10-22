@@ -10,7 +10,7 @@ if (isset($_POST['email'])) {
 
     if ($senha != $senha_confirme) {
 
-        echo "As senhas não são iguais.";
+        echo "<script>alert('As senhas não são iguais');window.location.href = 'Esqueci_senha.html';</script>";
 
     } else {
 

@@ -10,6 +10,20 @@ $con = mysqli_connect('localhost', 'root', '', 'barto2026');
 
 if ($senha != $csenha) {
     echo "<script>alert('As senhas não são iguais');window.location.href = 'tela_cadastro.html';</script>";
+    exit;
+}
+
+$sql = "SELECT * FROM cadastro WHERE email = ? OR telefone = ?";
+
+$comando = mysqli_prepare($con, $sql);
+mysqli_stmt_bind_param($comando, "ss", $email, $tel);
+mysqli_stmt_execute($comando);
+
+$resultado = mysqli_stmt_get_result($comando);
+
+if (mysqli_num_rows($resultado) > 0) {
+    echo "<script>alert('Esse email ou telefone já está cadastrado');window.location.href = 'tela_cadastro.html';</script>";
+    exit;
 } else {
 
     $senha = password_hash($senha, PASSWORD_DEFAULT);

@@ -28,7 +28,6 @@ body {
     padding-bottom: 0;
 }
 
-/* CABEÇALHO - classes preservadas */
 .header {
     background-color: #6E7F49;
     height: 8vh;
@@ -77,22 +76,19 @@ body {
     fill: currentColor;
 }
 
-/* Animação dos ícones do cabeçalho */
 #headerIcons img {
     cursor: pointer;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 #headerIcons img:hover {
     transform: translateY(-4px) scale(1.12);
-    opacity: 0.8;
 }
 
 #headerIcons img:active {
     transform: scale(0.95);
 }
 
-/* DESTAQUE / CARROSSEL */
 .secao-destaque {
     position: relative;
     width: 100%;
@@ -195,7 +191,6 @@ body {
     border-color: #5f6f47;
 }
 
-/* CONTEÚDO PRINCIPAL */
 .conteudo-principal {
     max-width: 1100px;
     margin: 32px auto 0;
@@ -226,7 +221,6 @@ body {
     fill: #3b3226;
 }
 
-/* CATEGORIAS */
 .lista-categorias {
     display: flex;
     align-items: center;
@@ -305,7 +299,6 @@ body {
     margin-left: auto;
 }
 
-/* GRIDS DE CÔMODOS E ESTILOS */
 .grade-cartoes {
     display: grid;
     grid-template-columns: repeat(4, 1fr) auto;
@@ -519,12 +512,11 @@ body {
 
 .imgFutter img {
     cursor: pointer;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .imgFutter img:hover {
     transform: translateY(-5px) scale(1.1);
-    opacity: 0.8;
 }
 
 .imgFutter img:active {
@@ -584,7 +576,6 @@ body {
     display: none;
 }
 
-/* RESPONSIVIDADE */
 @media (max-width: 900px) {
     .grade-cartoes {
         grid-template-columns: repeat(2, 1fr);

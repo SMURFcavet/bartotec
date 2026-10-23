@@ -10,6 +10,6 @@ if($contagem >0){
     header("Location:login2.php");
 }else{
     $_SESSION['logado']=0;
-    header("Location:login.html");
+    echo "<script>alert('Email ou senha incorretos, ou usuário não cadastrado');window.location.href = 'login.html';</script>";
 }
 ?>

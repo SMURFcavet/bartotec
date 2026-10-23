@@ -542,3 +542,30 @@ a {
     }
 
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #D3CDB8;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6E7F49;
+    border-radius: 10px;
+    border: 2px solid #D3CDB8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4F6038;
+}
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #6E7F49 #D3CDB8;
+}
+
+html {
+    scroll-behavior: smooth;
+}

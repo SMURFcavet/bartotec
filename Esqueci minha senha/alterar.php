@@ -9,7 +9,7 @@ $con = mysqli_connect('localhost', 'root', '', 'barto2026');
 
 if ($senha != $senha_confirme) {
 
-    echo "As senhas não são iguais.";
+    echo "<script>alert('As senhas não são iguais');window.location.href = 'Esqueci_senha.html';</script>";
     exit;
 
 } else {

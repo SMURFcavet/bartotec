@@ -30,7 +30,8 @@ if (mysqli_num_rows($busca) > 0) {
 }
 
 $_SESSION['logado'] = 0;
-header("Location:login.html");
+    echo "<script>alert('Você não tem conta ');window.location.href = 'login.html';</script>";
+
 exit;
 
 ?>

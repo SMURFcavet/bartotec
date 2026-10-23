@@ -1,0 +1,731 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #DAD3B8;
+    color: #171714;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+.header {
+    background-color: #6E7F49CC;
+
+    width: 100%;
+    height: 8vh;
+    min-height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    padding: 0 2vw;
+
+    z-index: 9999;
+}
+
+
+.logo {
+    height: 12vh;
+    max-height: 105px;
+    width: auto;
+
+    margin-top: 3vh;
+
+    object-fit: contain;
+
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+#headerIcons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 2vh;
+}
+
+#headerIcons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+}
+
+.favorite,
+.perfil {
+    height: 6vh;
+    max-height: 48px;
+    width: auto;
+
+    object-fit: contain;
+    vertical-align: middle;
+
+    cursor: pointer;
+
+    transition: transform 0.3s ease;
+}
+
+#headerIcons img:hover {
+    transform: translateY(-4px) scale(1.12);
+}
+
+#headerIcons img:active {
+    transform: scale(0.95);
+}
+
+.pagina {
+    width: 100%;
+    max-width: 1150px;
+
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    padding: calc(8vh + 55px) 5% 40px;
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    width: 100%;
+}
+
+.cabecalho svg {
+    width: 34px;
+    height: 34px;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.6;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.cabecalho h1 {
+    margin: 0;
+
+    font-size: 25px;
+    font-weight: 700;
+
+    text-align: center;
+}
+
+
+.linha {
+    width: 83%;
+    height: 1px;
+
+    margin: 14px auto 20px;
+
+    background-color: #B6AE95;
+}
+
+.ambientes {
+    width: 100%;
+}
+
+.ambientes h2 {
+    margin: 0 0 14px;
+
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.mensagem {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.mensagem:empty {
+    display: none;
+}
+
+.grade {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+.cartao {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 5px;
+
+    background-color: #E6DFC8;
+
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.13);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.cartao:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+}
+
+.cartao a {
+    display: block;
+
+    color: inherit;
+    text-decoration: none;
+}
+
+.cartao img {
+    display: block;
+
+    width: 100%;
+    aspect-ratio: 1.55 / 1;
+
+    object-fit: cover;
+}
+
+.rodape {
+    padding: 5px 8px;
+
+    font-size: 11px;
+    color: #777365;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.remover {
+    position: absolute;
+
+    top: 7px;
+    right: 7px;
+
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: rgba(255, 255, 255, 0.93);
+    color: #405444;
+
+    font-size: 19px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+.remover:hover {
+    color: #B54C4C;
+    transform: scale(1.12);
+}
+
+.remover:active {
+    transform: scale(0.95);
+}
+
+.chamada {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    margin-top: 32px;
+    padding: 15px 22px;
+
+    border-radius: 7px;
+
+    background-color: #D5BD9B;
+}
+
+.icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 46px;
+    height: 46px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background-color: #405444;
+    color: #E8DEC7;
+}
+
+.icone svg {
+    width: 27px;
+    height: 27px;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.chamada p {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    gap: 3px;
+
+    margin: 0;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.chamada strong {
+    font-weight: 700;
+}
+
+.chamada span {
+    font-weight: 400;
+}
+
+.chamada a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 20px;
+
+    border-radius: 5px;
+
+    background-color: #405444;
+    color: #FFFFFF;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.chamada a:hover {
+    background-color: #293B2D;
+    transform: translateY(-2px);
+}
+
+.futter {
+    background-color: #6E7F49CC;
+
+    width: 100%;
+    min-height: 50vh;
+
+    padding: 2vh 3vw;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 5vw;
+}
+
+.caixa1Futter {
+    width: fit-content;
+}
+
+.caixa2Futter {
+    width: fit-content;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.logoFutter {
+    height: 12vh;
+    width: auto;
+
+    margin-top: 3vh;
+
+    object-fit: contain;
+}
+
+.textoFutter {
+    color: #FAFAFA;
+
+    font-family: 'Poppins', sans-serif;
+
+    margin-top: -5vh;
+    margin-left: 1vw;
+
+    text-align: center;
+}
+
+.titleFutter {
+    color: #FAFAFA;
+
+    font-family: 'Poppins', sans-serif;
+
+    margin-top: 2vh;
+
+    font-weight: 600;
+}
+
+.linkFutter {
+    color: #FAFAFA;
+
+    font-family: 'Poppins', sans-serif;
+
+    margin-top: 1vh;
+
+    line-height: 1;
+
+    display: inline-block;
+    position: relative;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.linkFutter::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -4px;
+
+    width: 0;
+    height: 2px;
+
+    background-color: #FAFAFA;
+
+    transition: width 0.3s ease;
+}
+
+.linkFutter:hover {
+    color: #E8E4D5;
+    transform: translateX(4px);
+}
+
+.linkFutter:hover::after {
+    width: 100%;
+}
+
+.textoFutter2 {
+    color: #FAFAFA;
+
+    font-family: 'Poppins', sans-serif;
+
+    margin-top: 2vh;
+
+    text-align: left;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.sobreNos,
+.comoFunciona,
+.politicaPrivacidade,
+.centralAjuda,
+.faleConosco,
+.feedback {
+    display: none;
+}
+
+
+.imgFutter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 1vh;
+}
+
+.imgFutter img {
+    cursor: pointer;
+
+    transition: transform 0.3s ease;
+}
+
+.imgFutter img:hover {
+    transform: translateY(-5px) scale(1.1);
+}
+
+.imgFutter img:active {
+    transform: scale(0.95);
+}
+
+.socialFutter {
+    height: 6vh;
+    width: auto;
+}
+
+.socialFutters {
+    height: 5vh;
+    width: auto;
+
+    margin-top: 0.6vh;
+}
+
+.feedback {
+    display: none;
+
+    flex-direction: row;
+
+    gap: 10px;
+
+    margin-top: 1vh;
+}
+
+.feedbackImgAntes {
+    height: 4vh;
+    width: auto;
+
+    margin-top: 1vh;
+
+    vertical-align: top;
+
+    cursor: pointer;
+
+    transition: transform 0.3s ease;
+}
+
+.feedbackImgAntes:hover {
+    transform: scale(1.12);
+}
+
+.botaoFeedback {
+    background-color: #636A49;
+    color: #FAFAFA;
+
+    font-family: 'Poppins', sans-serif;
+
+    border: none;
+    border-radius: 5px;
+
+    padding: 8px 16px;
+
+    margin-top: 1vh;
+
+    cursor: pointer;
+
+    display: none;
+
+    transition: background-color 0.3s ease;
+}
+
+.botaoFeedback:hover {
+    background-color: #4F6038;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #D3CDB8;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #6E7F49;
+
+    border-radius: 10px;
+
+    border: 2px solid #D3CDB8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #4F6038;
+}
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #6E7F49 #D3CDB8;
+}
+
+@media (max-width: 900px) {
+
+    .grade {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        gap: 18px;
+    }
+
+    .futter {
+        flex-wrap: wrap;
+
+        justify-content: space-around;
+
+        gap: 30px;
+
+        padding: 30px 5%;
+    }
+
+    .caixa1Futter,
+    .caixa2Futter {
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .header {
+        height: 65px;
+        min-height: 65px;
+
+        padding: 0 4vw;
+    }
+
+    .logo {
+        height: 75px;
+        margin-top: 15px;
+    }
+
+    #headerIcons {
+        gap: 15px;
+    }
+
+    .favorite,
+    .perfil {
+        height: 35px;
+    }
+
+    .pagina {
+        padding: 130px 5% 35px;
+    }
+
+    .cabecalho h1 {
+        font-size: 22px;
+    }
+
+    .grade {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 15px;
+    }
+
+    .ambientes h2 {
+        font-size: 17px;
+    }
+
+    .chamada {
+        flex-wrap: wrap;
+
+        gap: 12px;
+
+        padding: 15px;
+    }
+
+    .chamada a {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .futter {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 20px;
+
+        padding: 30px 7%;
+    }
+
+    .caixa1Futter,
+    .caixa2Futter {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .logoFutter {
+        height: 100px;
+    }
+
+    .textoFutter {
+        margin-top: -35px;
+    }
+
+    .socialFutter {
+        height: 40px;
+    }
+
+    .socialFutters {
+        height: 35px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .grade {
+        gap: 10px;
+    }
+
+    .rodape {
+        font-size: 10px;
+    }
+
+    .cabecalho h1 {
+        font-size: 20px;
+    }
+
+    #headerIcons {
+        gap: 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .logo,
+    #headerIcons img,
+    .cartao,
+    .remover,
+    .chamada a,
+    .linkFutter,
+    .linkFutter::after,
+    .imgFutter img,
+    .feedbackImgAntes,
+    .botaoFeedback {
+        transition: none;
+    }
+}

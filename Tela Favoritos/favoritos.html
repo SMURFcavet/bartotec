@@ -1,0 +1,362 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meus Favoritos | Creative'S</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="favoritos.css">
+</head>
+
+<body>
+
+    <div class="header">
+
+        <a href="../Tela Principal/index.html">
+            <img
+                src="../img/header/logoCreative.png"
+                class="logo"
+                alt="Creative'S"
+            >
+        </a>
+
+        <div id="headerIcons">
+
+            <a href="favoritos.html">
+                <img
+                    src="../img/header/Favorite.png"
+                    class="favorite"
+                    alt="Favoritos"
+                >
+            </a>
+
+            <a href="../perfil/perfil.html">
+                <img
+                    src="../img/header/Profile.png"
+                    class="perfil"
+                    alt="Perfil"
+                >
+            </a>
+
+        </div>
+    </div>
+
+    <main class="pagina">
+
+        <header class="cabecalho">
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"
+                />
+            </svg>
+
+            <h1>Meus Favoritos</h1>
+
+        </header>
+
+        <div class="linha"></div>
+
+        <section class="ambientes">
+
+            <h2>Ambientes salvos</h2>
+
+            <p id="mensagem" class="mensagem"></p>
+
+            <div id="gradeFavoritos" class="grade"></div>
+
+        </section>
+
+        <aside class="chamada">
+
+            <div class="icone">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                        d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"
+                    />
+                </svg>
+            </div>
+
+            <p>
+                <strong>
+                    Salve ainda mais ambientes que você ama
+                </strong>
+
+                <span>
+                    Crie sua lista de inspirações e transforme
+                    seus sonhos em realidade!
+                </span>
+            </p>
+
+            <a href="../explorarCategorias/tudo.html">
+                Explorar ambientes
+            </a>
+
+        </aside>
+
+    </main>
+
+    <footer>
+
+        <div class="futter">
+
+            <div class="caixa1Futter">
+
+                <img
+                    src="../img/header/logoCreative.png"
+                    class="logoFutter"
+                    alt="Creative'S"
+                >
+
+                <p class="textoFutter">
+                    Seu ambiente dos sonhos <br>
+                    começa aqui
+                </p>
+
+            </div>
+
+            <div class="caixa2Futter" id="caixa2Futter">
+
+                <p class="titleFutter" id="titleFutter">
+                    Institucional
+                </p>
+
+                <a
+                    class="linkFutter"
+                    onclick="mostrarConteudo('sobreNos')"
+                >
+                    Sobre nós
+                </a>
+
+                <div class="sobreNos" id="sobreNos">
+                    <p class="textoFutter2" id="textoFutter2">
+                        Somos uma empresa dedicada a te inspirar a <br>
+                        deixar sua casa de modo a combinar com você, <br>
+                        e te ajudar a descobrir seus estilos favoritos.
+                    </p>
+                </div>
+
+                <a
+                    class="linkFutter"
+                    onclick="mostrarConteudo('comoFunciona')"
+                >
+                    Como funciona
+                </a>
+
+                <div class="comoFunciona" id="comoFunciona">
+                    <p class="textoFutter2" id="textoFutter2">
+                        A Creative'S ajuda você a descobrir seu <br>
+                        estilo de decoração por meio de categorias e <br>
+                        imagens inspiradoras para transformar seus <br>
+                        ambientes.
+                    </p>
+                </div>
+
+                <a
+                    class="linkFutter"
+                    onclick="mostrarConteudo('politicaPrivacidade')"
+                >
+                    Política de privacidade
+                </a>
+
+                <div
+                    class="politicaPrivacidade"
+                    id="politicaPrivacidade"
+                >
+                    <p class="textoFutter2" id="textoFutter2">
+                        Respeitamos sua privacidade e buscamos <br>
+                        proteger seus dados pessoais. As <br>
+                        informações fornecidas são utilizadas apenas <br>
+                        para melhorar sua experiência na Creative'S, <br>
+                        sempre com responsabilidade e segurança.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- AJUDA -->
+            <div class="caixa2Futter" id="caixa2Futter">
+
+                <p class="titleFutter" id="titleFutter">
+                    Ajuda
+                </p>
+
+                <a
+                    class="linkFutter"
+                    onclick="mostrarConteudo('centralAjuda')"
+                >
+                    Central de ajuda
+                </a>
+
+                <div class="centralAjuda" id="centralAjuda">
+                    <p class="textoFutter2" id="textoFutter2">
+                        Precisa de ajuda? Na Central de Ajuda da <br>
+                        Creative'S, você encontra orientações <br>
+                        para explorar ambientes, descobrir <br>
+                        inspirações e transformar suas ideias <br>
+                        em realidade.
+                    </p>
+                </div>
+
+                <a
+                    class="linkFutter"
+                    onclick="mostrarConteudo('faleConosco')"
+                >
+                    Fale conosco
+                </a>
+
+                <div class="faleConosco" id="faleConosco">
+                    <p class="textoFutter2" id="textoFutter2">
+                        Tem dúvidas, sugestões ou precisa de <br>
+                        ajuda? Entre em contato com a equipe <br>
+                        Creative'S. Estamos à disposição para <br>
+                        ouvir você!
+
+                        <br><br>
+
+                        E-mail: contato@creatives.com.br <br>
+                        Telefone: (11) 4002-8922
+                    </p>
+                </div>
+
+                <a
+                    class="linkFutter"
+                    onclick="mostrarConteudo('feedback')"
+                >
+                    Feedback
+                </a>
+
+                <form
+                    action="../php/salvarFeedback.php"
+                    method="POST"
+                >
+
+                    <div class="feedback" id="feedback">
+
+                        <input
+                            type="hidden"
+                            name="quantidade_coracao"
+                            id="quantidade_coracao"
+                            value="0"
+                        >
+
+                        <input
+                            type="hidden"
+                            name="pagina_origem"
+                            value="Tela Favoritos/favoritos.html"
+                        >
+
+                        <img
+                            src="../img/header/Favorite.png"
+                            class="feedbackImgAntes"
+                            id="feedbackImgAntes"
+                            onclick="trocarImagem(this)"
+                            alt="Avaliação 1"
+                        >
+
+                        <img
+                            src="../img/header/Favorite.png"
+                            class="feedbackImgAntes"
+                            id="feedbackImgAntes"
+                            onclick="trocarImagem(this)"
+                            alt="Avaliação 2"
+                        >
+
+                        <img
+                            src="../img/header/Favorite.png"
+                            class="feedbackImgAntes"
+                            id="feedbackImgAntes"
+                            onclick="trocarImagem(this)"
+                            alt="Avaliação 3"
+                        >
+
+                        <img
+                            src="../img/header/Favorite.png"
+                            class="feedbackImgAntes"
+                            id="feedbackImgAntes"
+                            onclick="trocarImagem(this)"
+                            alt="Avaliação 4"
+                        >
+
+                    </div>
+
+                    <button
+                        class="botaoFeedback"
+                        id="botaoFeedback"
+                        type="submit"
+                    >
+                        Enviar Feedback
+                    </button>
+
+                </form>
+
+            </div>
+
+            <div class="caixa2Futter">
+
+                <p class="titleFutter">Siga-nos</p>
+
+                <div class="imgFutter">
+
+                    <a href="https://whatsapp.com/channel/0029Vb91g3z05MUonxyeoD3K">
+                        <img
+                            src="../img/futter/whats.png"
+                            class="socialFutter"
+                            alt="WhatsApp"
+                        >
+                    </a>
+
+                    <a href="https://www.instagram.com/creatives.2026?mdxt=czhxZTBmbDJvOHB2&utm_source=qr">
+                        <img
+                            src="../img/futter/insta.png"
+                            class="socialFutter"
+                            alt="Instagram"
+                        >
+                    </a>
+
+                    <a href="https://x.com/creatives_2026?s=11">
+                        <img
+                            src="../img/futter/x.png"
+                            class="socialFutters"
+                            alt="X"
+                        >
+                    </a>
+
+                    <a href="https://www.facebook.com/profile.php?id=61595702372172">
+                        <img
+                            src="../img/futter/face.png"
+                            class="socialFutter"
+                            alt="Facebook"
+                        >
+                    </a>
+
+                </div>
+
+                <p class="textoFutter2">
+                    © 2026 Creative'S. Todos os direitos <br>
+                    reservados.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="../script/favoritos.js"></script>
+    <script src="favoritos.js"></script>
+
+</body>
+
+</html>

@@ -20,12 +20,9 @@ if (isset($_POST['email'])) {
 
         if ($resultado) {
 
-            $senha = password_hash($senha, PASSWORD_DEFAULT);
-
             mysqli_query($con, "UPDATE cadastro SET senha='$senha', senha_confirme='$senha' WHERE email='$email'");
 
             header("Location:../Tela login/login.html");
-            exit;
 
         } else {
 

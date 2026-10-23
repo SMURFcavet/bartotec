@@ -1,4 +1,4 @@
-arruma esse tambem <?php
+<?php
 
 $nome = $_POST['nome'];
 $tel = $_POST['telefone'];

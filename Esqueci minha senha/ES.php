@@ -29,7 +29,7 @@ if (isset($_POST['email'])) {
 
         } else {
 
-            $mensagem = "Email incorreto";
+            $mensagem = "Email incorreto ou inexistente";
             echo "<script>alert('$mensagem'); window.location.href = 'Esqueci_senha.html';</script>";
 
         }

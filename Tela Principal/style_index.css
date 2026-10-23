@@ -390,7 +390,7 @@ body {
 .estrelas-depoimento svg {
     width: 16px;
     height: 16px;
-    fill: var(--star-color);
+    fill: #a36142;;
 }
 
 .texto-depoimento {

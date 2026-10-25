@@ -1,9 +1,12 @@
-const sobreNos = document.getElementById("sobreNos") 
+
+        const sobreNos = document.getElementById("sobreNos") 
         const comoFunciona = document.getElementById("comoFunciona")
         const politicaPrivacidade = document.getElementById("politicaPrivacidade")
         const centralAjuda = document.getElementById("centralAjuda")
         const faleConosco = document.getElementById("faleConosco")
         const feedback = document.getElementById("feedback")
+        
+        let senhaReal = ""
 
         const coracao = document.querySelectorAll(".feedbackImgAntes")
 
@@ -158,6 +161,7 @@ const sobreNos = document.getElementById("sobreNos")
         let telefone = document.getElementById("telefone")
         let feedbackUser = document.getElementById("feedbackPerfil")
         let senha = document.getElementById("senha")
+        let nome = document.getElementById("nome")
 
         fetch('../php/perfil.php')
 
@@ -166,6 +170,9 @@ const sobreNos = document.getElementById("sobreNos")
             
         email.textContent = dados.email
         telefone.textContent = dados.telefone
+        senhaReal = dados.senha
+        senha.textContent = "•".repeat(senhaReal.length)
+        nome.textContent = dados.nome
         
 
         if ( dados.quantidade_coracao !== null )
@@ -180,7 +187,6 @@ const sobreNos = document.getElementById("sobreNos")
 
         } );
 
-
         function mostrarSenha(mostrar)
         {
 
@@ -192,8 +198,8 @@ const sobreNos = document.getElementById("sobreNos")
 
                 .then( resposta => resposta.json() )
                 .then( dados => { 
-                 
-                senha.textContent = dados.senha 
+    
+                senha.textContent = dados.senha
             
                 } );
                 
@@ -202,12 +208,8 @@ const sobreNos = document.getElementById("sobreNos")
             else
             {
                 mostrar.src = "../img/perfil/naoVisivel.png";
-                senha.textContent = "••••••••"
+                senha.textContent = "•".repeat(senhaReal.length)
             }
 
         }
 
-
-
-        
-        

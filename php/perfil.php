@@ -17,7 +17,7 @@
             die("Erro na conexão: " . mysqli_connect_error());
         }
 
-        $dadosUser = mysqli_query($con, "SELECT email, telefone, senha FROM cadastro WHERE id_cadastro = $id_cadastro");
+        $dadosUser = mysqli_query($con, "SELECT email, telefone, senha, nome FROM cadastro WHERE id_cadastro = $id_cadastro");
 
         $feedback = mysqli_query($con, "SELECT quantidade_coracao FROM feedback WHERE id_cadastro = $id_cadastro");
 

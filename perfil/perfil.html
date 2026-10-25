@@ -39,6 +39,8 @@
 
         <img src = "../img/perfil/user2.png" id = "imgPerfil">
 
+        <p id = "nome"></p>
+
         <div id = "alinhamento">
 
         <h1 id = "dados">Meus dados</h1>
@@ -47,29 +49,40 @@
 
            <div id = "grupoSenha">
 
-                <p id = "titlePerfil">Email: </p>
+                <img id = "iconPerfil" src = "../img/perfil/email.png">
                 <p id = "email"></p>
 
             </div>
 
+            <div class="linhaDecorativa"></div>
+
             <div id = "grupoSenha">
 
-                <p id = "titlePerfil">Telefone: </p>
+                <img id = "iconPerfil" src = "../img/perfil/telefone.png">
                 <p id = "telefone"></p>
 
             </div>
 
+            <div class="linhaDecorativa"></div>
+
             <div id = "grupoSenha">
 
-                <p id = "titlePerfil">Senha criptografada: </p>
-                <p id = "senha">••••••••</p>
+                <img id = "iconPerfil" src = "../img/perfil/senha.png">
+                <p id = "senha"></p>
                 <img src = "../img/perfil/naoVisivel.png" id = "naoVisivel" onclick="mostrarSenha(this)">
 
             </div>
 
-            <div id = "feedbackPerfil">
+            <div class="linhaDecorativa"></div>
+
+            <div id="grupoSenha">
+
+                <img id = "iconPerfil" src = "../img/perfil/coracao.png">
+                <p id="feedbackPerfil"></p>
 
             </div>
+
+            <div class="linhaDecorativa"></div>
 
         </div>
 
@@ -211,7 +224,7 @@
 
     </div>
 
-     <script src="../script/script.js"></script>
+    <script src = "../script/script.js"></script>
     
 </body>
 </html>

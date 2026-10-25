@@ -313,6 +313,31 @@ a {
     gap: 8px;
 }
 
+.linhaDecorativa {
+    width: 400%;
+    height: 2px;
+    background-color: #6E7F49;
+    margin: 20px auto;
+}
+
+#iconPerfil{
+    transition: transform 0.5s ease;
+}
+
+#iconPerfil:hover 
+{
+    transform: scale(1.15);
+}
+
+#naoVisivel{
+    transition: transform 0.5s ease;
+}
+
+#naoVisivel:hover 
+{
+    transform: scale(1.15);
+}
+
 #dados {
     color: #9B5A3C;
 }
@@ -609,4 +634,6 @@ html {
 html {
     scroll-behavior: smooth;
 }
+
+
 

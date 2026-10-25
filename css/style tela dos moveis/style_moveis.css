@@ -1,0 +1,865 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #DAD3B8;
+    font-family: 'Poppins', sans-serif;
+    color: #242820;
+}
+
+.header {
+    background-color: #6E7F49;
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    z-index: 9999;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#headerIcons {
+    display: flex;
+    align-items: center;
+    gap: 2vh;
+    margin-right: 2vw;
+}
+
+.logo {
+    height: 12vh;
+    width: auto;
+    margin-left: 2vw;
+    margin-top: 3vh;
+}
+
+.favorite,
+.perfil {
+    height: 6vh;
+    width: auto;
+    vertical-align: top;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.icon-btn svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+#headerIcons img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#headerIcons img:hover {
+    transform: translateY(-4px) scale(1.12);
+}
+
+#headerIcons img:active {
+    transform: scale(0.95);
+}
+
+
+#pagina {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 65px 35px 90px;
+}
+
+#informacoes {
+    width: 100%;
+}
+
+#titulo {
+    color: #B76647;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+
+#categoria {
+    color: #777965;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 22px;
+}
+
+#imagem {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    aspect-ratio: 1.95 / 1;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 7px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.22);
+}
+
+
+
+/* =====================================
+   SEÇÃO DE MÓVEIS
+===================================== */
+
+#secaoMoveis {
+    margin-top: 50px;
+    padding: 0 25px;
+}
+
+#tituloMoveis {
+    font-size: 24px;
+    font-weight: 700;
+    color: #242820;
+    margin-bottom: 22px;
+}
+
+#listaMoveis {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+/* =====================================
+   CARDS DOS 10 MÓVEIS
+===================================== */
+
+#movel1,
+#movel2,
+#movel3,
+#movel4,
+#movel5,
+#movel6,
+#movel7,
+#movel8,
+#movel9,
+#movel10 {
+    display: flex;
+    align-items: stretch;
+
+    width: 100%;
+    min-height: 135px;
+
+    background-color: #56624F;
+    border-radius: 9px;
+    overflow: hidden;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* ANIMAÇÃO DOS CARDS */
+
+#movel1:hover,
+#movel2:hover,
+#movel3:hover,
+#movel4:hover,
+#movel5:hover,
+#movel6:hover,
+#movel7:hover,
+#movel8:hover,
+#movel9:hover,
+#movel10:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* =====================================
+   CONTAINERS DAS IMAGENS
+===================================== */
+
+#imagemContainer1,
+#imagemContainer2,
+#imagemContainer3,
+#imagemContainer4,
+#imagemContainer5,
+#imagemContainer6,
+#imagemContainer7,
+#imagemContainer8,
+#imagemContainer9,
+#imagemContainer10 {
+    width: 25%;
+    min-width: 160px;
+
+    background-color: #FFFFFF;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* =====================================
+   IMAGENS DOS MÓVEIS
+===================================== */
+
+#imagemMovel1,
+#imagemMovel2,
+#imagemMovel3,
+#imagemMovel4,
+#imagemMovel5,
+#imagemMovel6,
+#imagemMovel7,
+#imagemMovel8,
+#imagemMovel9,
+#imagemMovel10 {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    padding: 8px;
+
+    transition: transform 0.3s ease;
+}
+
+/* ANIMAÇÃO DAS IMAGENS */
+
+#movel1:hover #imagemMovel1,
+#movel2:hover #imagemMovel2,
+#movel3:hover #imagemMovel3,
+#movel4:hover #imagemMovel4,
+#movel5:hover #imagemMovel5,
+#movel6:hover #imagemMovel6,
+#movel7:hover #imagemMovel7,
+#movel8:hover #imagemMovel8,
+#movel9:hover #imagemMovel9,
+#movel10:hover #imagemMovel10 {
+    transform: scale(1.05);
+}
+
+/* =====================================
+   INFORMAÇÕES DOS MÓVEIS
+===================================== */
+
+#informacoesMovel1,
+#informacoesMovel2,
+#informacoesMovel3,
+#informacoesMovel4,
+#informacoesMovel5,
+#informacoesMovel6,
+#informacoesMovel7,
+#informacoesMovel8,
+#informacoesMovel9,
+#informacoesMovel10 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    flex: 1;
+    min-width: 0;
+    padding: 17px 20px;
+}
+
+/* =====================================
+   NOMES DOS PRODUTOS
+===================================== */
+
+#nomeMovel1,
+#nomeMovel2,
+#nomeMovel3,
+#nomeMovel4,
+#nomeMovel5,
+#nomeMovel6,
+#nomeMovel7,
+#nomeMovel8,
+#nomeMovel9,
+#nomeMovel10 {
+    color: #FFFFFF;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* =====================================
+   PREÇOS E BOTÕES
+===================================== */
+
+#detalhesMovel1,
+#detalhesMovel2,
+#detalhesMovel3,
+#detalhesMovel4,
+#detalhesMovel5,
+#detalhesMovel6,
+#detalhesMovel7,
+#detalhesMovel8,
+#detalhesMovel9,
+#detalhesMovel10 {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+/* =====================================
+   PREÇOS
+===================================== */
+
+#precoMovel1,
+#precoMovel2,
+#precoMovel3,
+#precoMovel4,
+#precoMovel5,
+#precoMovel6,
+#precoMovel7,
+#precoMovel8,
+#precoMovel9,
+#precoMovel10 {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* TEXTO À VISTA NO PIX */
+
+#precoMovel1 small,
+#precoMovel2 small,
+#precoMovel3 small,
+#precoMovel4 small,
+#precoMovel5 small,
+#precoMovel6 small,
+#precoMovel7 small,
+#precoMovel8 small,
+#precoMovel9 small,
+#precoMovel10 small {
+    font-size: 10px;
+    font-weight: 400;
+}
+
+/* =====================================
+   BOTÕES DE COMPRA
+===================================== */
+
+#comprarMovel1,
+#comprarMovel2,
+#comprarMovel3,
+#comprarMovel4,
+#comprarMovel5,
+#comprarMovel6,
+#comprarMovel7,
+#comprarMovel8,
+#comprarMovel9,
+#comprarMovel10 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #DAD3B8;
+    color: #56624F;
+
+    padding: 11px 17px;
+    border-radius: 6px;
+
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+/* ANIMAÇÃO DOS BOTÕES */
+
+#comprarMovel1:hover,
+#comprarMovel2:hover,
+#comprarMovel3:hover,
+#comprarMovel4:hover,
+#comprarMovel5:hover,
+#comprarMovel6:hover,
+#comprarMovel7:hover,
+#comprarMovel8:hover,
+#comprarMovel9:hover,
+#comprarMovel10:hover {
+    background-color: #F0E8CA;
+    transform: scale(1.04);
+}
+
+/* =====================================
+   RESPONSIVIDADE - TABLETS
+===================================== */
+
+@media (max-width: 768px) {
+
+    #secaoMoveis {
+        padding: 0;
+        margin-top: 35px;
+    }
+
+    #tituloMoveis {
+        font-size: 21px;
+    }
+
+    #imagemContainer1,
+    #imagemContainer2,
+    #imagemContainer3,
+    #imagemContainer4,
+    #imagemContainer5,
+    #imagemContainer6,
+    #imagemContainer7,
+    #imagemContainer8,
+    #imagemContainer9,
+    #imagemContainer10 {
+        min-width: 130px;
+    }
+
+    #nomeMovel1,
+    #nomeMovel2,
+    #nomeMovel3,
+    #nomeMovel4,
+    #nomeMovel5,
+    #nomeMovel6,
+    #nomeMovel7,
+    #nomeMovel8,
+    #nomeMovel9,
+    #nomeMovel10 {
+        font-size: 14px;
+    }
+
+    #precoMovel1,
+    #precoMovel2,
+    #precoMovel3,
+    #precoMovel4,
+    #precoMovel5,
+    #precoMovel6,
+    #precoMovel7,
+    #precoMovel8,
+    #precoMovel9,
+    #precoMovel10 {
+        font-size: 13px;
+    }
+
+    #comprarMovel1,
+    #comprarMovel2,
+    #comprarMovel3,
+    #comprarMovel4,
+    #comprarMovel5,
+    #comprarMovel6,
+    #comprarMovel7,
+    #comprarMovel8,
+    #comprarMovel9,
+    #comprarMovel10 {
+        padding: 9px 12px;
+        font-size: 11px;
+    }
+}
+
+/* =====================================
+   RESPONSIVIDADE - CELULARES
+===================================== */
+
+@media (max-width: 480px) {
+
+    #tituloMoveis {
+        font-size: 19px;
+    }
+
+    #listaMoveis {
+        gap: 15px;
+    }
+
+    #movel1,
+    #movel2,
+    #movel3,
+    #movel4,
+    #movel5,
+    #movel6,
+    #movel7,
+    #movel8,
+    #movel9,
+    #movel10 {
+        min-height: 110px;
+    }
+
+    #imagemContainer1,
+    #imagemContainer2,
+    #imagemContainer3,
+    #imagemContainer4,
+    #imagemContainer5,
+    #imagemContainer6,
+    #imagemContainer7,
+    #imagemContainer8,
+    #imagemContainer9,
+    #imagemContainer10 {
+        width: 34%;
+        min-width: 0;
+        flex-shrink: 0;
+    }
+
+    #informacoesMovel1,
+    #informacoesMovel2,
+    #informacoesMovel3,
+    #informacoesMovel4,
+    #informacoesMovel5,
+    #informacoesMovel6,
+    #informacoesMovel7,
+    #informacoesMovel8,
+    #informacoesMovel9,
+    #informacoesMovel10 {
+        padding: 10px;
+    }
+
+    #nomeMovel1,
+    #nomeMovel2,
+    #nomeMovel3,
+    #nomeMovel4,
+    #nomeMovel5,
+    #nomeMovel6,
+    #nomeMovel7,
+    #nomeMovel8,
+    #nomeMovel9,
+    #nomeMovel10 {
+        font-size: 11px;
+        line-height: 1.35;
+    }
+
+    #detalhesMovel1,
+    #detalhesMovel2,
+    #detalhesMovel3,
+    #detalhesMovel4,
+    #detalhesMovel5,
+    #detalhesMovel6,
+    #detalhesMovel7,
+    #detalhesMovel8,
+    #detalhesMovel9,
+    #detalhesMovel10 {
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 10px;
+    }
+
+    #precoMovel1,
+    #precoMovel2,
+    #precoMovel3,
+    #precoMovel4,
+    #precoMovel5,
+    #precoMovel6,
+    #precoMovel7,
+    #precoMovel8,
+    #precoMovel9,
+    #precoMovel10 {
+        font-size: 11px;
+    }
+
+    #precoMovel1 small,
+    #precoMovel2 small,
+    #precoMovel3 small,
+    #precoMovel4 small,
+    #precoMovel5 small,
+    #precoMovel6 small,
+    #precoMovel7 small,
+    #precoMovel8 small,
+    #precoMovel9 small,
+    #precoMovel10 small {
+        font-size: 8px;
+    }
+
+    #comprarMovel1,
+    #comprarMovel2,
+    #comprarMovel3,
+    #comprarMovel4,
+    #comprarMovel5,
+    #comprarMovel6,
+    #comprarMovel7,
+    #comprarMovel8,
+    #comprarMovel9,
+    #comprarMovel10 {
+        padding: 7px 10px;
+        font-size: 10px;
+    }
+}
+
+
+/* RESPONSIVIDADE PARA CELULARES */
+
+@media (max-width: 480px) {
+
+    #paginaSala {
+        padding: 30px 15px 50px;
+    }
+
+    #voltar {
+        margin-bottom: 22px;
+    }
+
+    #tituloSala {
+        font-size: 23px;
+    }
+
+    #categoriaSala {
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+
+    #imagemSala {
+        aspect-ratio: 1.45 / 1;
+    }
+
+    #tituloMoveis {
+        font-size: 19px;
+    }
+
+    #listaMoveis {
+        gap: 15px;
+    }
+
+    #movel1,
+    #movel2,
+    #movel3,
+    #movel4 {
+        min-height: 110px;
+    }
+
+    #imagemContainer1,
+    #imagemContainer2,
+    #imagemContainer3,
+    #imagemContainer4 {
+        width: 34%;
+        min-width: 0;
+        flex-shrink: 0;
+    }
+
+    #informacoesMovel1,
+    #informacoesMovel2,
+    #informacoesMovel3,
+    #informacoesMovel4 {
+        padding: 10px;
+    }
+
+    #nomeMovel1,
+    #nomeMovel2,
+    #nomeMovel3,
+    #nomeMovel4 {
+        font-size: 11px;
+        line-height: 1.35;
+    }
+
+    #detalhesMovel1,
+    #detalhesMovel2,
+    #detalhesMovel3,
+    #detalhesMovel4 {
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 10px;
+    }
+
+    #precoMovel1,
+    #precoMovel2,
+    #precoMovel3,
+    #precoMovel4 {
+        font-size: 11px;
+    }
+
+    #precoMovel1 small,
+    #precoMovel2 small,
+    #precoMovel3 small,
+    #precoMovel4 small {
+        font-size: 8px;
+    }
+
+    #comprarMovel1,
+    #comprarMovel2,
+    #comprarMovel3,
+    #comprarMovel4 {
+        padding: 7px 10px;
+        font-size: 10px;
+    }
+}
+
+.logoFutter {
+    height: 12vh;
+    width: auto;
+    margin-top: 3vh;
+}
+
+.caixa1Futter {
+    width: fit-content;
+}
+
+.caixa2Futter {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.textoFutter {
+    color: #FAFAFA;
+    font-family: 'Poppins', sans-serif;
+    margin-top: -5vh;
+    margin-left: 1vw;
+    text-align: center;
+}
+
+.linkFutter {
+    color: #FAFAFA;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 1vh;
+    line-height: 1;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.linkFutter::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: #FAFAFA;
+    transition: width 0.3s ease;
+}
+
+.linkFutter:hover {
+    color: #E8E4D5;
+    transform: translateX(4px);
+}
+
+.linkFutter:hover::after {
+    width: 100%;
+}
+
+.titleFutter {
+    color: #FAFAFA;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 2vh;
+    font-weight: 600;
+}
+
+.futter {
+    background-color: #6E7F49CC;
+    width: 100%;
+    min-height: 50vh;
+    box-sizing: border-box;
+    padding: 2vh 3vw;
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5vw;
+}
+
+.imgFutter {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 1vh;
+}
+
+.imgFutter img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.imgFutter img:hover {
+    transform: translateY(-5px) scale(1.1);
+}
+
+.imgFutter img:active {
+    transform: scale(0.95);
+}
+
+.socialFutter {
+    height: 6vh;
+    width: auto;
+}
+
+.socialFutters {
+    height: 5vh;
+    width: auto;
+    margin-top: 0.6vh;
+}
+
+.textoFutter2 {
+    color: #FAFAFA;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 2vh;
+    text-align: left;
+}
+
+.sobreNos,
+.comoFunciona,
+.politicaPrivacidade,
+.centralAjuda,
+.faleConosco,
+.feedback {
+    display: none;
+}
+
+.feedbackImgAntes {
+    height: 4vh;
+    width: auto;
+    margin-top: 1vh;
+    vertical-align: top;
+}
+
+.feedback {
+    display: none;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 1vh;
+}
+
+.botaoFeedback {
+    background-color: #636A49;
+    color: #FAFAFA;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    margin-top: 1vh;
+    cursor: pointer;
+    display: none;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #D3CDB8;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6E7F49;
+    border-radius: 10px;
+    border: 2px solid #D3CDB8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4F6038;
+}
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #6E7F49 #D3CDB8;
+}
+
+html {
+    scroll-behavior: smooth;
+}

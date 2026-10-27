@@ -114,12 +114,6 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.22);
 }
 
-
-
-/* =====================================
-   SEÇÃO DE MÓVEIS
-===================================== */
-
 #secaoMoveis {
     margin-top: 50px;
     padding: 0 25px;
@@ -139,10 +133,6 @@ body {
     max-width: 850px;
     margin: 0 auto;
 }
-
-/* =====================================
-   CARDS DOS 10 MÓVEIS
-===================================== */
 
 #movel1,
 #movel2,
@@ -168,8 +158,6 @@ body {
                 box-shadow 0.3s ease;
 }
 
-/* ANIMAÇÃO DOS CARDS */
-
 #movel1:hover,
 #movel2:hover,
 #movel3:hover,
@@ -183,10 +171,6 @@ body {
     transform: translateY(-4px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
-
-/* =====================================
-   CONTAINERS DAS IMAGENS
-===================================== */
 
 #imagemContainer1,
 #imagemContainer2,
@@ -209,10 +193,6 @@ body {
     overflow: hidden;
 }
 
-/* =====================================
-   IMAGENS DOS MÓVEIS
-===================================== */
-
 #imagemMovel1,
 #imagemMovel2,
 #imagemMovel3,
@@ -232,8 +212,6 @@ body {
     transition: transform 0.3s ease;
 }
 
-/* ANIMAÇÃO DAS IMAGENS */
-
 #movel1:hover #imagemMovel1,
 #movel2:hover #imagemMovel2,
 #movel3:hover #imagemMovel3,
@@ -246,10 +224,6 @@ body {
 #movel10:hover #imagemMovel10 {
     transform: scale(1.05);
 }
-
-/* =====================================
-   INFORMAÇÕES DOS MÓVEIS
-===================================== */
 
 #informacoesMovel1,
 #informacoesMovel2,
@@ -270,10 +244,6 @@ body {
     padding: 17px 20px;
 }
 
-/* =====================================
-   NOMES DOS PRODUTOS
-===================================== */
-
 #nomeMovel1,
 #nomeMovel2,
 #nomeMovel3,
@@ -290,9 +260,20 @@ body {
     line-height: 1.4;
 }
 
-/* =====================================
-   PREÇOS E BOTÕES
-===================================== */
+#descricaoMovel1,
+#descricaoMovel2,
+#descricaoMovel3,
+#descricaoMovel4,
+#descricaoMovel5,
+#descricaoMovel6,
+#descricaoMovel7,
+#descricaoMovel8,
+#descricaoMovel9,
+#descricaoMovel10 {
+    color: #ffffffc7;
+    font-size: 11px;
+}
+
 
 #detalhesMovel1,
 #detalhesMovel2,
@@ -311,10 +292,6 @@ body {
     margin-top: 15px;
 }
 
-/* =====================================
-   PREÇOS
-===================================== */
-
 #precoMovel1,
 #precoMovel2,
 #precoMovel3,
@@ -331,8 +308,6 @@ body {
     white-space: nowrap;
 }
 
-/* TEXTO À VISTA NO PIX */
-
 #precoMovel1 small,
 #precoMovel2 small,
 #precoMovel3 small,
@@ -346,10 +321,6 @@ body {
     font-size: 10px;
     font-weight: 400;
 }
-
-/* =====================================
-   BOTÕES DE COMPRA
-===================================== */
 
 #comprarMovel1,
 #comprarMovel2,
@@ -380,8 +351,6 @@ body {
                 transform 0.3s ease;
 }
 
-/* ANIMAÇÃO DOS BOTÕES */
-
 #comprarMovel1:hover,
 #comprarMovel2:hover,
 #comprarMovel3:hover,
@@ -395,10 +364,6 @@ body {
     background-color: #F0E8CA;
     transform: scale(1.04);
 }
-
-/* =====================================
-   RESPONSIVIDADE - TABLETS
-===================================== */
 
 @media (max-width: 768px) {
 
@@ -464,10 +429,6 @@ body {
         font-size: 11px;
     }
 }
-
-/* =====================================
-   RESPONSIVIDADE - CELULARES
-===================================== */
 
 @media (max-width: 480px) {
 
@@ -589,9 +550,6 @@ body {
         font-size: 10px;
     }
 }
-
-
-/* RESPONSIVIDADE PARA CELULARES */
 
 @media (max-width: 480px) {
 

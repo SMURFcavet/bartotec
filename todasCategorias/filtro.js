@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 } else if (estilo === "japandi") {
                     destino = "../categoriasEmDestaque/jaspandi.html";
                 } else {
-                    destino = "../categoriasEmDestaque/tudoEmdestaque.html";
+                    destino = "todasCategorias.html";
                 }
 
                 if (comodo) destino += "?pesquisa=" + encodeURIComponent(comodo);
@@ -95,4 +95,17 @@ document.addEventListener("DOMContentLoaded", function () {
             area.prepend(aviso);
         }
     }
+
+    document.querySelectorAll(".cartao-comodo[data-comodo]").
+    forEach(function (cartao)
+    {
+        cartao.addEventListener("click", 
+        function()
+        {
+            const comodo = cartao.dataset.comodo;
+
+            window.location.href = "todasCategorias.html?pesquisa=" +
+            encodeURIComponent(comodo);
+        } )
+    })
 });

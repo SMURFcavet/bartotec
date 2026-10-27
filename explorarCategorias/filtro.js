@@ -107,4 +107,17 @@ document.addEventListener("DOMContentLoaded", function () {
             area.prepend(aviso);
         }
     }
+
+    document.querySelectorAll(".cartao-comodo[data-comodo]").
+    forEach(function (cartao)
+    {
+        cartao.addEventListener("click", 
+        function()
+        {
+            const comodo = cartao.dataset.comodo;
+
+            window.location.href = "../todasCategorias.html?pesquisa=" +
+            encodeURIComponent(comodo);
+        } )
+    })
 });

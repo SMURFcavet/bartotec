@@ -1,15 +1,39 @@
 const grade = document.getElementById('gradeFavoritos');
 const mensagem = document.getElementById('mensagem');
+const filtroEstilo = document.getElementById('filtroEstilo');
+
+const parametros = new URLSearchParams(window.location.search);
+const estiloInicial = parametros.get('estilo');
+
+if (estiloInicial) {
+    filtroEstilo.value = estiloInicial;
+}
 
 function renderizarFavoritos() {
     const itens = window.CreativesFavoritos.listar();
+
+    console.log(itens);
+
+    const estiloSelecionado = filtroEstilo.value
+
+    const normalizar = texto => texto
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+
+    const itensFiltrados = estiloSelecionado === 'Todos'
+    ? itens
+    : itens.filter(item =>
+        normalizar(item.estilo === 'jaspandi' ? 'japandi' : item.estilo) === normalizar(estiloSelecionado)
+    )
+
     grade.replaceChildren();
 
-    mensagem.textContent = itens.length
+    mensagem.textContent = itensFiltrados.length
         ? ''
         : 'Você ainda não salvou nenhum ambiente. Explore as categorias e clique no coração!';
 
-    for (const item of itens) {
+    for (const item of itensFiltrados) {
         const card = document.createElement('article');
         card.className = 'cartao';
 
@@ -43,6 +67,8 @@ function renderizarFavoritos() {
 renderizarFavoritos();
 window.addEventListener('favoritos-atualizados', renderizarFavoritos);
 window.addEventListener('storage', renderizarFavoritos);
+
+filtroEstilo.addEventListener('change', renderizarFavoritos)
 
 const sobreNos = document.getElementById("sobreNos");
 const comoFunciona = document.getElementById("comoFunciona");

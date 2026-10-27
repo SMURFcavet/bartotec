@@ -45,6 +45,12 @@ body {
 
 }
 
+#perfilQuiz {
+    height: 5vh;
+    width: auto;
+    vertical-align: top;
+}
+
 #main {
     flex: 1;
     display: flex;

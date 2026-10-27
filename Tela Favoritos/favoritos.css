@@ -729,3 +729,42 @@ html {
         transition: none;
     }
 }
+
+
+.ambientes label[for="filtroEstilo"] {
+    display: block;
+    margin: 20px 0 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #3a3227;
+}
+
+#filtroEstilo {
+    display: block;
+    width: min(88%, 320px);
+    padding: 10px 14px;
+    margin: 0 auto 24px;
+    box-sizing: border-box;
+
+    border: 1px solid #636A49;
+    border-radius: 22px;
+    background-color: #fff;
+    color: #3a3227;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#filtroEstilo:hover {
+    border-color: #6E7F49;
+}
+
+#filtroEstilo:focus {
+    border-color: #6E7F49;
+    box-shadow: 0 0 0 3px #6E7F4926;
+}
+

@@ -288,6 +288,7 @@ body {
     font-size: 11px;
     color: #554d42;
     margin-top: 4px;
+    margin-left: 10px;
 }
 
 .grupo-navegacao {
@@ -311,6 +312,18 @@ body {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.cartao-comodo:hover{
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: scale(0.95);
+    
+}
+
+.cartao-estilo:hover{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: scale(0.95);
 }
 
 .imagem-cartao {

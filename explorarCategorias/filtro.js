@@ -18,14 +18,13 @@ document.addEventListener("DOMContentLoaded", function () {
             <option value="moderno">Moderno</option>
             <option value="rustico">Rústico</option>
             <option value="industrial">Industrial</option>
-            <option value="jaspandi">Jaspandi</option>
+            <option value="japandi">Japandi</option>
         </select>
         <select id="filtroComodo" aria-label="Escolha um cômodo">
             <option value="">Todos os cômodos</option>
             <option value="Quarto">Quarto</option>
-            <option value="Sala de estar">Sala de estar</option>
+            <option value="Sala">Sala</option>
             <option value="Cozinha">Cozinha</option>
-            <option value="Sala de jantar">Sala de jantar</option>
             <option value="Banheiro">Banheiro</option>
             <option value="Área externa">Área externa</option>
             <option value="Varanda">Varanda</option>
@@ -43,24 +42,29 @@ document.addEventListener("DOMContentLoaded", function () {
         <button type="button" id="botaoFiltro">Mostrar</button>
     `;
 
-    document.getElementById("botaoFiltro").addEventListener("click", function () {
-        const estilo = document.getElementById("filtroEstilo").value;
-        const comodo = document.getElementById("filtroComodo").value;
-        let destino;
+    let botaoFiltro = document.getElementById("botaoFiltro")
 
-        if (estilo === "moderno") {
-            destino = "../explorarCategorias/moderno.html";
-        } else if (estilo === "minimalista" || estilo === "rustico" || estilo === "industrial") {
-            destino = "../categoriasEmDestaque/" + estilo + ".html";
-        } else if (estilo === "jaspandi") {
-            destino = "../categoriasEmDestaque/jaspandi.html";
-        } else {
-            destino = "../categoriasEmDestaque/tudoEmdestaque.html";
+        if (botaoFiltro !== null) {
+            botaoFiltro.addEventListener("click", function () {
+
+               const estilo = document.getElementById("filtroEstilo").value;
+                const comodo = document.getElementById("filtroComodo").value;
+                let destino;
+
+                if (estilo === "moderno") {
+                    destino = "../explorarCategorias/moderno.html";
+                } else if (estilo === "minimalista" || estilo === "rustico" || estilo === "industrial") {
+                    destino = "../categoriasEmDestaque/" + estilo + ".html";
+                } else if (estilo === "japandi") {
+                    destino = "../categoriasEmDestaque/jaspandi.html";
+                } else {
+                    destino = "../categoriasEmDestaque/tudoEmdestaque.html";
+                }
+
+                if (comodo) destino += "?pesquisa=" + encodeURIComponent(comodo);
+                window.location.href = destino;
+            })
         }
-
-        if (comodo) destino += "?pesquisa=" + encodeURIComponent(comodo);
-        window.location.href = destino;
-    });
 
     const parametros = new URLSearchParams(window.location.search);
     const termo = parametros.get("pesquisa");
@@ -70,16 +74,27 @@ document.addEventListener("DOMContentLoaded", function () {
         const cartoes = document.querySelectorAll("#posicaoCategoria, .category-card");
         let quantidade = 0;
 
+        const grupos = document.querySelectorAll("#imagensCategoria")
+        const alinhamento = grupos[0]
+
         cartoes.forEach(function (cartao) {
             const textoCartao = normalizar(cartao.innerText);
             if (textoCartao.includes(procurado)) {
+                alinhamento.appendChild(cartao)
                 cartao.style.display = "";
-                cartao.style.outline = "3px solid #6E7F49";
                 quantidade++;
+                alinhamento.style.display = "flex"
+                alinhamento.style.flexWrap = "wrap"
             } else {
                 cartao.style.display = "none";
             }
         });
+
+        grupos.forEach(function (grupo, indice) {
+            if (indice > 0) {
+                grupo.style.display = "none"
+            }
+        })
 
         if (quantidade > 0) {
             const primeiro = document.querySelector("#posicaoCategoria:not([style*='display: none']), .category-card:not([style*='display: none'])");

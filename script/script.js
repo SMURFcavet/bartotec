@@ -162,30 +162,48 @@
         let feedbackUser = document.getElementById("feedbackPerfil")
         let senha = document.getElementById("senha")
         let nome = document.getElementById("nome")
+        let quizUser = document.getElementById("quizPerfil")
 
-        fetch('../php/perfil.php')
+        if (email !== null) 
+        {
 
-        .then( resposta => resposta.json() )
-        .then( dados => { 
+            fetch('../php/perfil.php')
+
+            .then( resposta => resposta.json() )
+            .then( dados => { 
+                
+            email.textContent = dados.email
+            telefone.textContent = dados.telefone
+            senhaReal = dados.senha
+            senha.textContent = "•".repeat(senhaReal.length)
+
+            nome.textContent = dados.nome
+
+            if ( dados.estilo_result !== null )
+            {
+                quizUser.textContent = dados.estilo_result
+            }
+
+            else
+            {
+                quizUser.textContent = "Quiz pendente"
+            }
+
             
-        email.textContent = dados.email
-        telefone.textContent = dados.telefone
-        senhaReal = dados.senha
-        senha.textContent = "•".repeat(senhaReal.length)
-        nome.textContent = dados.nome
-        
 
-        if ( dados.quantidade_coracao !== null )
-                {
-                    feedbackUser.textContent = dados.quantidade_coracao
-                }
+            if ( dados.quantidade_coracao !== null )
+                    {
+                        feedbackUser.textContent = dados.quantidade_coracao
+                    }
 
-                else
-                {
-                    feedbackUser.textContent = "Feedback pendente"
-                }
+                    else
+                    {
+                        feedbackUser.textContent = "Feedback pendente"
+                    }
 
-        } );
+            } );
+
+        }
 
         function mostrarSenha(mostrar)
         {

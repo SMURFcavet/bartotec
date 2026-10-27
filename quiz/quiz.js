@@ -82,6 +82,22 @@ function(event)
 
     }
 
+        const estiloQuiz = estilosVencedores.join(", ")
+
+        const dados = new FormData()
+        dados.append("estilo_result", estiloQuiz)
+
+        fetch("../php/quiz.php", {
+            method: "POST",
+            body: dados
+        })
+
+        .then(response => response.text())
+        .then((mensagem) => {
+            console.log(mensagem)
+        })
+
+
         fetch('https://raw.githubusercontent.com/isabellysilvasantos815-sketch/api-creatives/master/db.json')
         .then(resposta => resposta.json())
         .then(dados => {

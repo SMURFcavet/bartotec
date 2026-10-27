@@ -21,3 +21,12 @@ create table feedback
 );
 
 select*from feedback;
+
+create table quiz
+(
+    id_quiz int not null auto_increment primary key,
+    id_cadastro int not null unique,
+    estilo_result varchar(200) not null,
+
+    foreign key (id_cadastro ) references cadastro(id_cadastro)
+);

@@ -1,5 +1,3 @@
-/* Favoritos compartilhados entre as páginas do site.
-   Armazenamento local: sem PHP e sem MySQL. */
 (() => {
     'use strict';
 

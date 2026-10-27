@@ -4,18 +4,24 @@ session_start();
 
 function mostrarAlerta($mensagem, $pagina)
 {
-    echo "<script>
-        alert('$mensagem');
-        window.location.href = '../$pagina';
-    </script>";
+    // Permite retornar apenas para arquivos do próprio projeto.
+    $pagina = str_replace('\\', '/', (string) $pagina);
+    $caminho = realpath(__DIR__ . '/../' . $pagina);
+    $raiz = realpath(__DIR__ . '/..') . DIRECTORY_SEPARATOR;
+    if (!$caminho || strpos($caminho, $raiz) !== 0 || !is_file($caminho)) {
+        $pagina = 'Tela Principal/index.html';
+    }
+    $mensagemJs = json_encode($mensagem, JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_QUOT | JSON_HEX_APOS);
+    $destinoJs = json_encode('../' . $pagina, JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_QUOT | JSON_HEX_APOS);
+    echo "<script>alert($mensagemJs); window.location.href = $destinoJs;</script>";
     exit();
 }
 
 if($_SERVER['REQUEST_METHOD'] === 'POST')
 {
-    if (!($_SESSION['logado'] == 1))
+    if (($_SESSION['logado'] ?? 0) != 1)
     {
-        header("Location:../Tela Login/login.html");
+        header("Location:../Tela login/login.html");
         exit();
     }
 

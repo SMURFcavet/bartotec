@@ -15,7 +15,7 @@ if ($senha != $senha_confirme) {
 
     mysqli_query($con, "UPDATE cadastro SET email='$email', senha='$senha', senha_confirme='$senha_confirme' WHERE id_cadastro='$id_cadastro'");
 
-    header("Location: login.php");
+    header("Location: ../Tela login/login.html");
 }
 
 ?>

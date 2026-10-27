@@ -167,7 +167,7 @@
         if (email !== null) 
         {
 
-            fetch('../php/perfil.php')
+            if (email && telefone && feedbackUser) fetch('../php/perfil.php')
 
             .then( resposta => resposta.json() )
             .then( dados => { 

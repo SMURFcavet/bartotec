@@ -4,7 +4,7 @@
 
         if (!($_SESSION['logado'] == 1))
         {
-            header("Location:../Tela Login/login.html");
+            header("Location:../Tela login/login.html");
             exit();
         }
 

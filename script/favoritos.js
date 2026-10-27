@@ -65,7 +65,7 @@
             imagem: caminho.href,
             titulo,
             estilo,
-            pagina: location.href
+            pagina: img.closest('a[href]')?.href || card.querySelector('a[href]')?.href || location.href
         };
     }
 

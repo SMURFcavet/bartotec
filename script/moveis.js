@@ -107,7 +107,7 @@ const sobreNos = document.getElementById("sobreNos")
                     if ( imagem.src.includes("Favorite.png") )
                     {
 
-                        imagem.src = "../img/futter/coracaoFeedback.png";
+                        imagem.src = "../../../img/futter/coracaoFeedback.png";
                         imagem.style.height = "3vh";
                         imagem.style.width = "auto";
                         imagem.style.marginTop =  "1.5vh";
@@ -116,7 +116,7 @@ const sobreNos = document.getElementById("sobreNos")
 
                     else 
                     {
-                        imagem.src = "../img/header/Favorite.png";
+                        imagem.src = "../../../img/header/Favorite.png";
                     }
 
                 }
@@ -142,14 +142,14 @@ const sobreNos = document.getElementById("sobreNos")
 
             if ( favorito.src.includes("favoriteBorder"))
             {
-                favorito.src = favorito.src = "../img/futter/coracaoFeedback.png";
+                favorito.src = favorito.src = "../../../img/futter/coracaoFeedback.png";
                 favorito.style.height = "2.5vh";
                 favorito.style.width = "auto";
             }
 
             else
             {
-                favorito.src = "../img/header/favoriteBorder.png";
+                favorito.src = "../../../img/header/favoriteBorder.png";
             }
             
         }
@@ -159,7 +159,7 @@ const sobreNos = document.getElementById("sobreNos")
         let feedbackUser = document.getElementById("feedbackPerfil")
         let senha = document.getElementById("senha")
 
-        fetch('../php/perfil.php')
+        if (email && telefone && feedbackUser) fetch('../../../php/perfil.php')
 
         .then( resposta => resposta.json() )
         .then( dados => { 

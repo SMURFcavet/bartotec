@@ -30,3 +30,19 @@ create table quiz
 
     foreign key (id_cadastro ) references cadastro(id_cadastro)
 );
+
+create table favoritos
+(
+    id_favoritos int not null auto_increment primary key,
+    id_cadastro int not null,
+    ambiente varchar(300),
+    imagem varchar(300),
+    titulo varchar(200),
+    estilo varchar(100),
+    pagina varchar(300),
+
+    foreign key (id_cadastro ) references cadastro(id_cadastro),
+    unique (id_cadastro, ambiente)
+)
+
+select*from favoritos;

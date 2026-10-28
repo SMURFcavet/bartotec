@@ -9,8 +9,8 @@ if (estiloInicial) {
     filtroEstilo.value = estiloInicial;
 }
 
-function renderizarFavoritos() {
-    const itens = window.CreativesFavoritos.listar();
+async function renderizarFavoritos() {
+    const itens = await window.CreativesFavoritos.listar();
 
     console.log(itens);
 

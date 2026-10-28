@@ -10,13 +10,20 @@
         alternar
     };
 
-    function listar() {
-        try {
-            const dados = JSON.parse(localStorage.getItem(CHAVE) || '[]');
-            return Array.isArray(dados) ? dados : [];
-        } catch (erro) {
-            console.warn('Não foi possível ler os favoritos:', erro);
-            return [];
+    async function listar() 
+    {
+        try 
+        {
+            const resposta = await fetch('../php/favoritos.php')
+            const dados = await resposta.json()
+
+            return Array.isArray(dados) ? dados : []
+        } 
+        
+        catch (erro) 
+        {
+            console.log('Erro ao buscar favoritos:', erro)
+            return []
         }
     }
 
@@ -31,20 +38,55 @@
         }
     }
 
-    function remover(id) {
-        return salvar(listar().filter(item => item.id !== id));
+    function alternar(item) {
+        console.log("Entrei na função alternar")
+        const dados = new FormData()
+        dados.append("ambiente", item.id)
+        dados.append("imagem", item.imagem)
+        dados.append("titulo", item.titulo)
+        dados.append("estilo", item.estilo)
+        dados.append("pagina", item.pagina)
+
+        fetch("../php/favoritos.php", 
+        {
+            method: "POST",
+            body: dados
+        })
+
+        .then(resposta => resposta.text())
+        .then(texto => 
+        {
+            if (texto.includes("removido")) 
+            {
+                console.log("O favorito foi removido")
+            } 
+            
+            else if (texto.includes("salvo")) 
+            {
+                console.log("O favorito foi adicionado")
+            } 
+            
+            else 
+            {
+                console.log(texto)
+            }
+
+            pintarCoracoes()
+            window.dispatchEvent(new Event('favoritos-atualizados'))
+        })
     }
 
-    function alternar(item) {
-        const lista = listar();
-        const indice = lista.findIndex(f => f.id === item.id);
-        const ativo = indice < 0;
-        if (ativo) {
-            lista.push(item);
-        } else {
-            lista.splice(indice, 1);
-        }
-        return salvar(lista) ? ativo : null;
+    function remover(item) 
+    {
+        const dados = new FormData()
+        dados.append("ambiente", item)
+
+        fetch("../php/favoritos.php", {
+            method: "POST",
+            body: dados
+        })
+        .then(resposta => resposta.text())
+        .then(texto => console.log(texto))
     }
 
     function dadosDoCard(card) {
@@ -67,8 +109,8 @@
         };
     }
 
-    function pintarCoracoes() {
-        const salvos = new Set(listar().map(item => item.id));
+    async function pintarCoracoes() {
+        const salvos = new Set((await listar()).map(item => item.ambiente))
         document.querySelectorAll('img[id="favoriteBorder"]').forEach(coracao => {
             const card = coracao.closest('[id="posicaoCategoria"]');
             const item = card && dadosDoCard(card);
@@ -90,6 +132,7 @@
 
     // Substitui a função antiga, que apenas trocava a imagem do coração.
     window.favoritar = function (coracao) {
+        console.log("Cliquei no coração")
         const card = coracao.closest('[id="posicaoCategoria"]');
         const item = card && dadosDoCard(card);
         if (!item) return;

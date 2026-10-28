@@ -43,6 +43,6 @@ create table favoritos
 
     foreign key (id_cadastro ) references cadastro(id_cadastro),
     unique (id_cadastro, ambiente)
-)
+);
 
 select*from favoritos;
